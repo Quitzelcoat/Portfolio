@@ -5,10 +5,10 @@
 First create skeleton of the website by doing the following.
 
 1.  Create the main page set up the text in the middle. (Done)
-2.  Create the navbar upside of it.
-3.  Don't worry about the other designs yet. You will create all those designs later.
-4.  Start creating the about page. Start by putting the img and the about info on it.
-5.  Start creating the tools and skills section.
+2.  Create the navbar upside of it. Leave the logo place empty for now. (Done)
+3.  Don't worry about the other designs yet. You will create all those designs later. (Done)
+4.  Start creating the about page. Start by creating the img place and the about info on the right of it.
+5.  Start creating the tools and skills section. It will be in the About section but put the file inside components.
 6.  Create the cards with each one having the different skills you have.
 7.  Make skills types spinning animation.
 8.  Next create the project page, starting with project card and on the right of it the text and everything related to it.

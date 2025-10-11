@@ -3,3 +3,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #222222;
 }
+
+h1,
+p {
+  margin: 0;
+}

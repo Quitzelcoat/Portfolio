@@ -1,0 +1,19 @@
+ul,
+h2 {
+  margin: 0px;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+  background-color: #ffffff;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
