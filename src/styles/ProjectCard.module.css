@@ -1,0 +1,77 @@
+/* src/styles/ProjectCard.module.css */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--card-bg, #fff);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* flips columns when reverse */
+.reverse {
+  direction: rtl; /* easy swap for LTR images/text */
+}
+.reverse .content {
+  direction: ltr; /* keep text readable */
+}
+
+/* Media / image wrapper */
+.mediaWrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text content */
+.content {
+  padding: 0.5rem;
+}
+.title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+.description {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+  color: #333;
+}
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+.techItem {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 0.85rem;
+}
+
+/* Links */
+.links a {
+  margin-right: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 780px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .reverse {
+    direction: ltr; /* don't keep rtl on small screens */
+  }
+}

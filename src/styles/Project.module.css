@@ -1,0 +1,18 @@
+/* src/styles/Projects.module.css */
+.projectsSection {
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
