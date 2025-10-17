@@ -1,0 +1,59 @@
+/* src/styles/Contact.module.css */
+.contactSection {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contactForm {
+  display: grid;
+  gap: 1rem;
+  background: var(--card-bg, #fff);
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldRow label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.fieldRow input,
+.fieldRow textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 1rem;
+  outline: none;
+}
+
+.fieldRow input:focus,
+.fieldRow textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}

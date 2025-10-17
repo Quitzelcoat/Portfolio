@@ -12,9 +12,8 @@ First create skeleton of the website by doing the following. You don't need to f
 6.  Create the cards with each one having the different skills you have. (Done)
 7.  Next create the project page, starting with project card and on the right of it the text and everything related to it. (Done)
 8.  Make all the project cards and text for all the projects you will show on the website. (Only skeleton for now) (Done)
-9.  Finally to the contact page. Start it by putting some kind of call to action btn. But for now only create the skeleton.
-10. Link to clandely and also write all the text and different links places.
-11. Create the bottom all right reserved footer section.
+9.  Finally to the contact page. Start it by putting some kind of call to action btn. But for now only create the skeleton. (Done)
+10. Create the bottom all right reserved footer section. (Done)
 
 Now move to design creation:
 
@@ -30,7 +29,8 @@ Now move to design creation:
 10. Make cards of the colors as well.
 11. Make the typeography intractable as well. The cards of the colors as well should be reactable.
 12. Check the contact page if there is any animation needed to be added.
-13. Create the rainbow effect on moving the cursor.
+13. Link to clandely and also write all the text and different links places.
+14. Create the rainbow effect on moving the cursor.
 
 ## Colors:
 
