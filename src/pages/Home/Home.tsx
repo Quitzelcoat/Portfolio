@@ -1,5 +1,7 @@
+// src/pages/Home.tsx
 import homeStyles from './Home.module.css';
-import CommandCard from '../../components/CommandCard/CommandCard';
+import CommandSwitcher from '../../components/CommandCard/CommandSwitcher';
+import { commandData } from '../../data/commandData';
 
 const Home = () => {
   return (
@@ -8,14 +10,10 @@ const Home = () => {
         <h1 className={homeStyles.titleText}>Hello</h1>
         <p className={homeStyles.infoText}>Small Text</p>
       </div>
+
       <div className={homeStyles.textContainerTwo}>
-        <CommandCard
-          initialLines={[
-            'npx create-portfolio --template minimal',
-            'cd portfolio',
-            'npm run dev',
-          ]}
-        />
+        {/* Single switcher that shows one card at a time */}
+        <CommandSwitcher data={commandData} defaultId={commandData[0]?.id} />
       </div>
     </section>
   );
