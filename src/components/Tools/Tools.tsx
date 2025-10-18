@@ -1,4 +1,4 @@
-import toolStyle from '../styles/Tools.module.css';
+import toolStyle from './Tools.module.css';
 
 const Tools = () => {
   return (

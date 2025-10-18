@@ -1,10 +1,10 @@
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Tools from './components/Tools';
-import Project from './pages/Project';
-import Contact from './pages/Contact';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Tools from './components/Tools/Tools';
+import Project from './pages/Project/Project';
+import Contact from './pages/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

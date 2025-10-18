@@ -1,7 +1,7 @@
 // src/pages/Projects.tsx
 import React from 'react';
-import styles from '../styles/Project.module.css';
-import ProjectCard from '../components/ProjectCard';
+import styles from './Project.module.css';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 export type Project = {
   id: string;

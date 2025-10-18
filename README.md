@@ -30,7 +30,10 @@ Now move to design creation:
 11. Make the typeography intractable as well. The cards of the colors as well should be reactable.
 12. Check the contact page if there is any animation needed to be added.
 13. Link to clandely and also write all the text and different links places.
-14. Create the rainbow effect on moving the cursor.
+14. Create scroll bar. And change the cursor into something smooth.
+15. Create the rainbow effect on moving the cursor.
+16. Create dark theme.
+17. Now fix it for mobile and tablet version.
 
 ## Colors:
 

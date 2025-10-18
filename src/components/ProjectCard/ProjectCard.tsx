@@ -1,7 +1,7 @@
 // src/components/ProjectCard.tsx
 import React from 'react';
-import cardStyles from '../styles/ProjectCard.module.css';
-import type { Project } from '../pages/Project';
+import cardStyles from './ProjectCard.module.css';
+import type { Project } from '../../pages/Project/Project';
 
 type Props = {
   project: Project;

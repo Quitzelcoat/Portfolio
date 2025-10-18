@@ -1,6 +1,6 @@
 // src/pages/Contact.tsx
 import React from 'react';
-import styles from '../styles/Contact.module.css';
+import styles from './Contact.module.css';
 
 const Contact: React.FC = () => {
   return (

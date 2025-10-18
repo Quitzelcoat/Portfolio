@@ -1,6 +1,6 @@
 // src/components/Footer.tsx
 import React from 'react';
-import footerStyles from '../styles/Footer.module.css';
+import footerStyles from './Footer.module.css';
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
