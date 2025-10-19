@@ -1,5 +1,5 @@
 // src/components/CommandCard/CommandSwitcher.tsx
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import CommandCard from './CommandCard';
 import type { CommandCardData } from '../../data/commandData';
 import styles from './CommandSwitcher.module.css';

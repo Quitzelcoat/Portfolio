@@ -1,0 +1,79 @@
+/* overlay container */
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* base dot */
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08),
+    inset 0 1px 3px rgba(255, 255, 255, 0.06);
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 240ms linear;
+  width: 12px;
+  height: 12px;
+  /* fallback durations if not provided */
+  --dur: 18s;
+  --delay: 0s;
+  --huedur: 12s;
+  --hueddelay: 0s;
+
+  /* use CSS variables for animation timing — names are local to this CSS module */
+  animation: float var(--dur) ease-in-out var(--delay) infinite,
+    hue var(--huedur) linear var(--hueddelay) infinite;
+}
+
+/* float animation (same name as used above) */
+@keyframes float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  25% {
+    transform: translate3d(10px, -12px, 0) scale(1.04);
+  }
+  50% {
+    transform: translate3d(-8px, 8px, 0) scale(0.98);
+  }
+  75% {
+    transform: translate3d(12px, 10px, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* subtle hue shimmer */
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg) saturate(1.05) blur(0.25px);
+  }
+  50% {
+    filter: hue-rotate(32deg) saturate(1.08) blur(0.35px);
+  }
+  100% {
+    filter: hue-rotate(0deg) saturate(1.05) blur(0.25px);
+  }
+}
+
+/* small-screen hint: hide for clarity */
+@media (max-width: 520px) {
+  .overlay {
+    display: none;
+  }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    opacity: 0.18 !important;
+  }
+}

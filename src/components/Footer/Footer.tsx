@@ -1,5 +1,3 @@
-// src/components/Footer.tsx
-import React from 'react';
 import footerStyles from './Footer.module.css';
 
 const Footer: React.FC = () => {

@@ -1,5 +1,3 @@
-// src/components/ProjectCard.tsx
-import React from 'react';
 import cardStyles from './ProjectCard.module.css';
 import type { Project } from '../../pages/Project/Project';
 

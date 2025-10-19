@@ -1,5 +1,3 @@
-// src/pages/Projects.tsx
-import React from 'react';
 import styles from './Project.module.css';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 

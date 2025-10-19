@@ -1,12 +1,13 @@
-import React from 'react';
 import homeStyles from './Home.module.css';
 import CommandSwitcher from '../../components/CommandCard/CommandSwitcher';
 import AnimatedHello from '../../components/AnimatedHello/AnimatedHello';
 import { commandData } from '../../data/commandData';
+import DotsOverlay from '../../components/DotsOverlay/DotsOverlay';
 
 const Home: React.FC = () => {
   return (
     <section className={homeStyles.home}>
+      <DotsOverlay />
       <div className={homeStyles.textContainerOne}>
         <h1 className={homeStyles.titleText}>
           <AnimatedHello />

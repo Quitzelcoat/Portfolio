@@ -17,8 +17,8 @@ First create skeleton of the website by doing the following. You don't need to f
 
 Now move to design creation:
 
-1.  Create the command line card on the main page and on hover and click make it reactive.
-2.  Create rainbow moving small dots on the main page.
+1.  Create the command line card on the main page and on hover and click make it reactive. (Done)
+2.  Create rainbow moving small dots on the main page. (Done)
 3.  Create the main page left side line with the text.
 4.  Create the scroll down btn and other animation effects on the main page.
 5.  Make the img and the cards interactable and animated.
