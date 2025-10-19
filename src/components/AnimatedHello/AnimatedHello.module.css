@@ -1,0 +1,33 @@
+.wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* each greeting fades in, stays, fades out */
+.greeting {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  animation: fadeSlide 1.6s ease-in-out forwards;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}

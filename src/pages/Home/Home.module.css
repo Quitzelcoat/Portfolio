@@ -1,25 +1,107 @@
-/* MyComponent.module.css */
 .home {
   background-color: #f8f8f8;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 20px;
-  gap: 20px;
+  grid-template-columns: 55% 45%;
+  padding: 32px;
+  gap: 12px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .textContainerOne {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  align-items: flex-end;
+
+  gap: 0.45rem;
+
+  padding: 0 0.8rem;
+  max-width: 760px;
+
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.textContainerOne > * {
+  max-width: 42ch;
+  text-align: left;
+  display: block;
 }
 
 .titleText {
-  font-size: 5rem;
-  padding-bottom: 0.8rem;
+  font-size: 4.2rem;
+  line-height: 1;
+  margin: 0;
+  color: #0b1220;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.infoText {
+  margin-top: 0.6rem;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.35;
+}
+
+.infoText > span {
+  color: #1f6feb;
+  font-weight: 800;
+  font-size: 1.08rem;
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.infoText > span::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  margin-top: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(31, 111, 235, 0.18),
+    rgba(31, 111, 235, 0.08)
+  );
+  border-radius: 6px;
 }
 
 .textContainerTwo {
-  font-size: 18px;
-  width: 60vh;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 0.8rem;
+  max-width: 760px;
+  width: 100%;
+}
+
+@media (max-width: 820px) {
+  .home {
+    grid-template-columns: 1fr;
+    padding: 20px 14px;
+  }
+
+  .textContainerOne {
+    text-align: center;
+    padding-bottom: 0.6rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleText {
+    font-size: 3rem;
+  }
+
+  .textContainerTwo {
+    justify-content: center;
+    margin-top: 0.6rem;
+    padding: 0 0.6rem;
+  }
 }
