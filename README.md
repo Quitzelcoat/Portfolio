@@ -19,7 +19,7 @@ Now move to design creation:
 
 1.  Create the command line card on the main page and on hover and click make it reactive. (Done)
 2.  Create rainbow moving small dots on the main page. (Done)
-3.  Create the main page left side line with the text.
+3.  Create the main page left side line with the text. (Done)
 4.  Create the scroll down btn and other animation effects on the main page.
 5.  Make the img and the cards interactable and animated.
 6.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.

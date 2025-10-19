@@ -1,0 +1,66 @@
+/* VerticalLine.module.css */
+
+/* container uses a clamped height so the line is noticeably longer
+   but never so long that it breaks the hero layout */
+.container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* makes the line a good visual length on most viewports:
+     at least 260px, up to 520px, otherwise 56vh. */
+  height: clamp(260px, 100vh, 520px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none; /* don't block interactions */
+  z-index: 2;
+}
+
+.topWrap {
+  width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem; /* space between top label and the line */
+}
+
+.bottomWrap {
+  width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5rem; /* space between bottom label and the line */
+}
+
+/* softened line color and opacity so it blends with the page */
+.line {
+  width: 1px;
+  flex: 1 1 auto;
+  background-color: rgba(123, 123, 123, 0.45); /* softer than full hex */
+  opacity: 0.95;
+  border-radius: 1px;
+  margin: 14px 0; /* more space around joins */
+}
+
+/* rotated label text, slightly lighter opacity for blending */
+.label {
+  pointer-events: auto; /* allow selection/copy */
+  transform: rotate(-90deg);
+  transform-origin: center;
+  color: rgba(123, 123, 123, 0.72); /* less harsh than pure #7b7b7b */
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  display: inline-block;
+  background: transparent;
+  user-select: text;
+}
+
+/* hide on small screens so the layout stays clean */
+@media (max-width: 820px) {
+  .container {
+    display: none;
+  }
+}

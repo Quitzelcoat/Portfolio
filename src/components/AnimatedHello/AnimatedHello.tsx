@@ -11,7 +11,6 @@ const defaultGreetings = [
   'Hola', // Spanish
   'Bonjour', // French
   'سلام', // Persian/Urdu/Arabic (Salam)
-  'नमस्ते', // Hindi
   '你好', // Chinese
   'こんにちは', // Japanese
   'Olá', // Portuguese
