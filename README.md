@@ -20,8 +20,8 @@ Now move to design creation:
 1.  Create the command line card on the main page and on hover and click make it reactive. (Done)
 2.  Create rainbow moving small dots on the main page. (Done)
 3.  Create the main page left side line with the text. (Done)
-4.  Create the scroll down btn and other animation effects on the main page.
-5.  Make the img and the cards interactable and animated.
+4.  Create the scroll down btn and other animation effects on the main page. (Done)
+5.  Now for the about section create the vertical line on the right for the about page and also fix the about section and make it interactive.
 6.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.
 7.  Make skills types spinning animation.
 8.  On the project page make the cards interactive and also the btns. Add the scroll down as well on the right bottom.
@@ -30,10 +30,12 @@ Now move to design creation:
 11. Make the typeography intractable as well. The cards of the colors as well should be reactable.
 12. Check the contact page if there is any animation needed to be added.
 13. Link to clandely and also write all the text and different links places.
-14. Create scroll bar. And change the cursor into something smooth.
-15. Create the rainbow effect on moving the cursor.
-16. Create dark theme.
-17. Now fix it for mobile and tablet version.
+14. Create the scroll right bar. And change the cursor into something smooth.
+15. Fix the nav bar. Fix it's colors make the text go left and on the right make the resume btn to download the resume.
+16. Make the resume btn work.
+17. Create the rainbow effect on moving the cursor.
+18. Create dark theme.
+19. Now fix it for mobile and tablet version.
 
 ## Colors:
 
