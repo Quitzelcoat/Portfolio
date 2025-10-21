@@ -31,11 +31,12 @@ Now move to design creation:
 12. Check the contact page if there is any animation needed to be added.
 13. Link to clandely and also write all the text and different links places.
 14. Create the scroll right bar. And change the cursor into something smooth.
-15. Fix the nav bar. Fix it's colors make the text go left and on the right make the resume btn to download the resume.
-16. Make the resume btn work.
-17. Create the rainbow effect on moving the cursor.
-18. Create dark theme.
-19. Now fix it for mobile and tablet version.
+15. Remove the navbar from the top instead create one on the right side like map direction lines with pins.
+16. Instead on the top make is modern look with links to linkedin etc...
+17. Make the resume btn work.
+18. Create the rainbow effect on moving the cursor.
+19. Create dark theme.
+20. Now fix it for mobile and tablet version.
 
 ## Colors:
 
