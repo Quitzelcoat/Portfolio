@@ -21,7 +21,7 @@ Now move to design creation:
 2.  Create rainbow moving small dots on the main page. (Done)
 3.  Create the main page left side line with the text. (Done)
 4.  Create the scroll down btn and other animation effects on the main page. (Done)
-5.  Now for the about section create the vertical line on the right for the about page and also fix the about section and make it interactive.
+5.  Now for the about section create the vertical line on the right for the about page.
 6.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.
 7.  Make skills types spinning animation.
 8.  On the project page make the cards interactive and also the btns. Add the scroll down as well on the right bottom.
