@@ -1,110 +1,187 @@
 .toolSection {
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 40px 0;
+  padding: 4rem 0;
+  overflow: hidden;
 }
 
-/* Accent line + label (top left) */
+/* backdrop "SKILLS" text */
+.toolsBgText {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9rem;
+  font-weight: 900;
+  color: rgba(34, 34, 34, 0.063);
+  letter-spacing: 0.26em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
 .topLeftAccent {
   position: absolute;
-  top: 2.6rem;
-  left: 4rem;
+  top: 2.4rem;
+  left: 3rem;
   display: flex;
   align-items: center;
+  gap: 1rem;
   z-index: 10;
 }
 .sectionLabel {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #222222;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  margin-right: 1rem;
+  letter-spacing: 0.12em;
 }
 .sectionLine {
   display: inline-block;
-  height: 2px;
-  width: 500px;
+  height: 4px;
+  width: 60px;
   background: #222222;
   border-radius: 2px;
   opacity: 0.7;
 }
 
-/* Card grid (three columns, big cards) */
+/* Card grid (three columns) */
 .toolsGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 1fr));
-  gap: 42px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 120px auto 0 auto;
+  gap: 2.8rem;
+  width: 94%;
+  max-width: 1100px;
+  position: relative;
+  z-index: 2;
 }
 
+/* Enhanced glassmorphism card */
 .toolCard {
-  background-color: #ffffff;
-  border-radius: 0px;
-  box-shadow: none;
-  padding: 36px 30px 38px 30px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 24px rgba(34, 34, 34, 0.06);
+  border-radius: 0;
+  padding: 2rem 1.4rem 2.2rem 1.4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid #e6e6e6;
-  min-height: 420px;
-  transition: box-shadow 0.2s;
+  min-height: 340px;
+  transition: all 0.35s ease;
 }
 .toolCard:hover {
-  box-shadow: 0 6px 24px rgba(34, 34, 34, 0.11);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  box-shadow: 0 12px 40px rgba(34, 34, 34, 0.14);
+  transform: translateY(-5px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 .toolCard h3 {
+  font-size: 1.3rem;
   color: #222222;
-  font-size: 1.23rem;
   font-weight: 700;
-  margin-bottom: 18px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.4rem;
 }
 
-.toolCard ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Skills: alternating 3-2-3-2 centered pattern */
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
   width: 100%;
 }
 
-.toolCard li {
-  font-size: 1rem;
-  color: #7b7b7b;
-  padding: 8px 0;
+.skillBox {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 13px;
-  transition: transform 0.16s cubic-bezier(0.37, 0.96, 0.7, 0.97);
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.35s ease, background 0.35s ease;
+  width: calc(33.333% - 0.8rem);
+  max-width: 85px;
 }
 
-.toolCard li:hover {
-  transform: scale(1.12);
-  background: #f8f8f8;
-  border-radius: 6px;
+/* Alternate row widths: 3 items, then 2 items */
+.skillBox:nth-child(3n + 4),
+.skillBox:nth-child(3n + 5) {
+  width: calc(50% - 0.6rem);
+  max-width: 100px;
+}
+
+.skillBox:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: rgba(248, 248, 248, 0.7);
 }
 
 .skillIcon {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+.skillName {
+  font-size: 0.88rem;
+  color: #7b7b7b;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Button styling */
+.letsMeetContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  z-index: 2;
+}
+.letsMeetBtn {
+  background: #222222;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.9rem 2.6rem;
+  font-size: 1.06rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(34, 34, 34, 0.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.letsMeetBtn:hover {
+  background: #7b7b7b;
+  transform: scale(1.05);
 }
 
 /* Responsive tweaks */
 @media (max-width: 960px) {
   .toolsGrid {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-top: 110px;
+    gap: 2rem;
   }
   .topLeftAccent {
-    left: 2rem;
+    left: 1.5rem;
     top: 1.2rem;
+  }
+  .toolsBgText {
+    font-size: 4.5rem;
+    top: 18%;
+  }
+  .skillBox {
+    width: calc(50% - 0.6rem);
+  }
+  .skillBox:nth-child(3n + 4),
+  .skillBox:nth-child(3n + 5) {
+    width: calc(50% - 0.6rem);
   }
 }
