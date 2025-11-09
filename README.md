@@ -21,22 +21,23 @@ Now move to design creation:
 2.  Create rainbow moving small dots on the main page. (Done)
 3.  Create the main page left side line with the text. (Done)
 4.  Create the scroll down btn and other animation effects on the main page. (Done)
-5.  Now for the about section create the vertical line on the right for the about page.
-6.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.
+5.  Now for the about section create the vertical line on the right for the about page. (Done)
+6.  Create Tools & Skills card and fix and design the page. (Done)
 7.  Make skills types spinning animation.
 8.  On the project page make the cards interactive and also the btns. Add the scroll down as well on the right bottom.
-9.  Create a typography page showing the colors used on the website and what each color represents.
-10. Make cards of the colors as well.
-11. Make the typeography intractable as well. The cards of the colors as well should be reactable.
-12. Check the contact page if there is any animation needed to be added.
-13. Link to clandely and also write all the text and different links places.
-14. Create the scroll right bar. And change the cursor into something smooth.
-15. Remove the navbar from the top instead create one on the right side like map direction lines with pins.
-16. Instead on the top make is modern look with links to linkedin etc...
-17. Make the resume btn work.
-18. Create the rainbow effect on moving the cursor.
-19. Create dark theme.
-20. Now fix it for mobile and tablet version.
+9.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.
+10. Create a typography page showing the colors used on the website and what each color represents.
+11. Make cards of the colors as well.
+12. Make the typeography intractable as well. The cards of the colors as well should be reactable.
+13. Check the contact page if there is any animation needed to be added.
+14. Link to clandely and also write all the text and different links places.
+15. Create the scroll right bar. And change the cursor into something smooth.
+16. Remove the navbar from the top instead create one on the right side like map direction lines with pins.
+17. Instead on the top make is modern look with links to linkedin etc...
+18. Make the resume btn work.
+19. Create the rainbow effect on moving the cursor.
+20. Create dark theme.
+21. Now fix it for mobile and tablet version.
 
 ## Colors:
 

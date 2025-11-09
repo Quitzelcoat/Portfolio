@@ -3,11 +3,18 @@ import aboutStyles from './About.module.css';
 const About = () => {
   return (
     <section className={aboutStyles.aboutContainer}>
+      <div className={aboutStyles.aboutTopRight}>
+        <span className={aboutStyles.aboutLabel}>About</span>
+        <span className={aboutStyles.aboutLine}></span>
+      </div>
+
       <span className={aboutStyles.aboutBgText}>ABOUT</span>
+
       <div className={aboutStyles.imgContainer}>
         <div className={aboutStyles.imgLine}></div>
         <img src="/images/louvre.jpg" alt="Portrait of Me" />
       </div>
+
       <article className={aboutStyles.aboutArticle}>
         <h2>
           My Story<span className={aboutStyles.aboutDot}>.</span>
