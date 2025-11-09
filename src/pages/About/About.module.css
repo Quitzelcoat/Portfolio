@@ -5,6 +5,22 @@
   align-items: center;
   padding: 2rem 0;
   position: relative;
+  overflow: hidden;
+}
+
+.aboutBgText {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 15rem;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 0.063); /* super low opacity for classic look */
+  letter-spacing: 0.3em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
 }
 
 .imgContainer {
@@ -14,7 +30,18 @@
   position: relative;
   left: 0;
   background-color: #ffffff;
-  overflow: hidden;
+}
+
+.imgLine {
+  position: absolute;
+  top: -60px;
+  right: 30px;
+  height: 720px;
+  width: 3px;
+  background: #222222;
+  border-radius: 2px;
+  opacity: 0.8;
+  z-index: 2;
 }
 
 .imgContainer img {
@@ -30,7 +57,7 @@
   max-height: 70vh;
   overflow-y: auto;
   padding: 0 2rem;
-  margin: 0 auto;
+  margin: 0 10rem;
 }
 
 .aboutArticle h2 {
@@ -38,6 +65,11 @@
   color: #222222;
   margin: 0 0 1.5rem 0;
   font-weight: 700;
+  position: sticky;
+  top: 0;
+  background: #f8f8f8; /* matches your background */
+  padding-top: 1rem;
+  z-index: 3; /* stays above the scrollbar and paragraphs */
 }
 
 .aboutArticle p {
@@ -45,6 +77,10 @@
   line-height: 1.7;
   color: #7b7b7b;
   margin-bottom: 1.2rem;
+}
+
+.aboutDot {
+  color: #ff5733; /* Accent color for the dot */
 }
 
 /* Custom scrollbar */
