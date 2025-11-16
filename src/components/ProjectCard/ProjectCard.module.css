@@ -1,77 +1,183 @@
-/* src/styles/ProjectCard.module.css */
-.card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+.projectCard {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  background: var(--card-bg, #fff);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  gap: 6vw;
+  min-height: 420px;
+  margin: 3rem 0;
 }
 
-/* flips columns when reverse */
 .reverse {
-  direction: rtl; /* easy swap for LTR images/text */
-}
-.reverse .content {
-  direction: ltr; /* keep text readable */
+  flex-direction: row-reverse;
 }
 
-/* Media / image wrapper */
-.mediaWrapper {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
+.imageCardContainer {
+  position: relative;
+  width: 540px;
+  height: 400px;
+  min-width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-.thumbnail {
-  width: 100%;
-  height: auto;
-  display: block;
+
+/* Glass background card: NO SHADOW, more glassy, straight (no tilt) */
+.glassBgCard {
+  position: absolute;
+  width: 540px;
+  height: 400px;
+  right: -135px;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.reverse .glassBgCard {
+  right: auto;
+  left: -135px;
+}
+
+/* Actual project image - NO shadow */
+.projectImg {
+  width: 540px;
+  height: 400px;
   object-fit: cover;
+  border-radius: 6px;
+  background: #e8e8e8;
+  position: relative;
+  z-index: 2;
+  will-change: transform;
 }
 
-/* Text content */
-.content {
-  padding: 0.5rem;
+/* Project Details */
+.projectDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 280px;
+  max-width: 540px;
+  padding-left: 68px;
 }
-.title {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
+.reverse .projectDetails {
+  padding-left: 0;
+  padding-right: 68px;
 }
-.description {
-  margin: 0 0 0.75rem 0;
-  line-height: 1.5;
-  color: #333;
+
+.projectTitle {
+  font-size: 1.85rem;
+  color: #222222;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
+
+.projectDesc {
+  font-size: 1.08rem;
+  color: #7b7b7b;
+  line-height: 1.72;
+  margin-bottom: 1.1rem;
+}
+
 .techList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0.75rem 0;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 .techItem {
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.06);
-  font-size: 0.85rem;
+  font-size: 0.94rem;
+  color: #222222;
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 5px 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-/* Links */
-.links a {
-  margin-right: 0.75rem;
-  text-decoration: none;
+.linksRow {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.linkBtn {
+  background: #222222;
+  color: #fff;
+  font-size: 1.02rem;
   font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 30px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 3px 12px rgba(34, 34, 34, 0.08);
+  display: inline-block;
+}
+.linkBtn:hover {
+  background: #7b7b7b;
+  transform: scale(1.05);
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 780px) {
-  .card {
-    grid-template-columns: 1fr;
+/* Responsive */
+@media (max-width: 1100px) {
+  .imageCardContainer {
+    width: 420px;
+    height: 320px;
+    min-width: 340px;
   }
-  .reverse {
-    direction: ltr; /* don't keep rtl on small screens */
+  .glassBgCard {
+    width: 420px;
+    height: 320px;
+    right: -105px;
+    bottom: -80px;
+  }
+  .reverse .glassBgCard {
+    left: -105px;
+  }
+  .projectImg {
+    width: 420px;
+    height: 320px;
+  }
+  .projectCard {
+    gap: 4vw;
+  }
+}
+@media (max-width: 900px) {
+  .imageCardContainer {
+    width: 90vw;
+    max-width: 480px;
+    height: 300px;
+  }
+  .glassBgCard {
+    width: 90vw;
+    max-width: 480px;
+    height: 300px;
+    right: -60px;
+    bottom: -60px;
+  }
+  .projectImg {
+    width: 90vw;
+    max-width: 480px;
+    height: 300px;
+  }
+  .projectCard {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 2.8rem;
+  }
+  .projectDetails {
+    margin: 0;
+    padding: 0 !important;
+    max-width: none;
+    width: 100%;
   }
 }
