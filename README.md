@@ -24,7 +24,7 @@ Now move to design creation:
 5.  Now for the about section create the vertical line on the right for the about page. (Done)
 6.  Create Tools & Skills card and fix and design the page. (Done)
 7.  Make skills types spinning animation. (Done)
-8.  On the project page make the cards interactive and also the btns. Add the scroll down as well on the right bottom.
+8.  On the project page make the cards interactive and also the btns. (Done)
 9.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.
 10. Create a typography page showing the colors used on the website and what each color represents.
 11. Make cards of the colors as well.

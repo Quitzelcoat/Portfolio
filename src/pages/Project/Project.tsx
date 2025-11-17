@@ -11,11 +11,9 @@ const Projects: React.FC = () => (
     </div>
     <div className={styles.projectsList}>
       {projectsData.map((project, index) => (
-        <ProjectCard
-          key={project.id}
-          project={project}
-          reverse={index % 2 === 1}
-        />
+        <div key={project.id} id={project.id}>
+          <ProjectCard project={project} reverse={index % 2 === 1} />
+        </div>
       ))}
     </div>
   </section>
