@@ -25,7 +25,7 @@ Now move to design creation:
 6.  Create Tools & Skills card and fix and design the page. (Done)
 7.  Make skills types spinning animation. (Done)
 8.  On the project page make the cards interactive and also the btns. (Done)
-9.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all.
+9.  Down the project create the cards for all the projects but this time small just for animation purposes. And design all. (Done)
 10. Create a typography page showing the colors used on the website and what each color represents.
 11. Make cards of the colors as well.
 12. Make the typeography intractable as well. The cards of the colors as well should be reactable.
