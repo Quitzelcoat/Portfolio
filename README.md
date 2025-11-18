@@ -30,14 +30,18 @@ Now move to design creation:
 11. Make cards of the colors as well.
 12. Make the typeography intractable as well. The cards of the colors as well should be reactable.
 13. Check the contact page if there is any animation needed to be added.
-14. Link to clandely and also write all the text and different links places.
-15. Create the scroll right bar. And change the cursor into something smooth.
-16. Remove the navbar from the top instead create one on the right side like map direction lines with pins.
-17. Instead on the top make is modern look with links to linkedin etc...
-18. Make the resume btn work.
-19. Create the rainbow effect on moving the cursor.
+14. Remove the navbar from the top instead create one on the right side like map direction lines with pins.
+15. Instead on the top make is modern look with links to linkedin etc...
+16. Create the scroll right bar. And change the cursor into something smooth.
+17. Create the rainbow effect on moving the cursor. Or maybe something within the color pallet.
+18. Fix the animation dots on the home make.
+19. Create all the animations left on the webpage.
 20. Create dark theme.
 21. Now fix it for mobile and tablet version.
+22. Fix the projects needed to be attached to the portfolio.
+23. Create projects images as well to put in the portfolio.
+24. Link to clandely and also write all the text and different links places.
+25. Make the resume btn work.
 
 ## Colors:
 
