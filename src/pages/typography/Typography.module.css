@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 
+/* BACKDROP */
 .typoBgText {
   position: absolute;
   left: 50%;
@@ -22,6 +23,7 @@
   z-index: 0;
 }
 
+/* SECTION LABEL */
 .topLeftAccent {
   position: absolute;
   top: 2.2rem;
@@ -46,80 +48,110 @@
   opacity: 0.28;
 }
 
-/* Grid Layout */
-.contentGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 98vw;
-  margin-top: 100px;
-  position: relative;
-  z-index: 2;
+/* ============= */
+/* TYPOGRAPHY    */
+/* ============= */
+
+.typographyBlock {
+  max-width: 1100px;
+  margin: 110px auto 0 auto;
+  width: 92vw;
 }
 
-.typographyLeft {
-  padding-right: 2rem;
-}
-.colorsRightRow {
-  display: flex;
-  align-items: baseline;
-  gap: 2.5rem;
-  padding-left: 2rem;
-}
 .heading {
-  font-size: 2.55rem;
+  font-size: 3.8rem;
   color: #222222;
-  font-weight: 400;
+  font-weight: 350;
   letter-spacing: 0.01em;
-  margin: 0;
-  flex: 0 0 auto;
-}
-.colorDescription {
-  font-size: 1.1rem;
-  color: #7b7b7b;
-  line-height: 1.8;
-  margin: 0;
-  flex: 1 1 auto;
-  text-align: right;
+  margin: 0 0 2rem 0;
 }
 
-/* Font List */
+/* Typography list – cleaner, vertical rhythm */
 .fontsList {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-}
-.fontItem {
-  background: transparent;
-  padding: 0;
-  border: none;
-}
-.fontTitle {
-  font-size: 1.75rem;
-  color: #222222;
-  font-weight: 400;
-  margin-bottom: 0.6rem;
-  letter-spacing: 0.01em;
-}
-.fontDescription {
-  font-size: 1.07rem;
-  color: #7b7b7b;
-  margin-bottom: 0.4rem;
-  line-height: 1.67;
-}
-.fontUsage {
-  font-size: 0.97rem;
-  color: #222222;
-  background: #f8f8f8;
-  padding: 5px 13px;
-  border-radius: 5px;
-  font-weight: 600;
-  display: inline-block;
+  gap: 2.4rem;
 }
 
-/* Color cards grid */
+.fontItem {
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(123, 123, 123, 0.18);
+}
+
+.fontItem:last-of-type {
+  border-bottom: none;
+}
+
+.fontItemHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Font name: larger, lighter weight */
+.fontTitle {
+  font-size: 1.9rem;
+  color: #222222;
+  font-weight: 350;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* Badge next to title */
+.fontUsage {
+  font-size: 0.9rem;
+  color: #222222;
+  background: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.fontDescription {
+  font-size: 1.02rem;
+  color: #7b7b7b;
+  margin: 0;
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+/* ============= */
+/* COLOR SECTION */
+/* ============= */
+
+.colorBlock {
+  max-width: 1100px;
+  margin: 4.2rem auto 0 auto;
+  width: 92vw;
+}
+
+/* Color heading + text stacked but aligned like a system doc */
+.colorHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+/* keep heading behavior */
+.colorHeaderRow .heading {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* make description narrow */
+.colorDescription {
+  font-size: 1.08rem;
+  color: #7b7b7b;
+  line-height: 1.75;
+  margin: 0;
+  flex: 0 1 520px; /* <— limits width */
+  max-width: 520px; /* <— extra safety */
+}
+
 .colorCardsScrollWrapper {
   width: 100%;
   overflow-x: auto;
@@ -132,89 +164,81 @@
   margin: 0 auto;
   width: 94vw;
   margin-top: 6.5rem;
-  min-height: 350px;
+  min-height: 380px;
   position: relative;
   z-index: 2;
 }
+
 .colorCard {
   width: 260px;
-  height: 340px;
+  height: 360px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: none;
   border: none;
   position: relative;
   cursor: pointer;
-  transition: transform 0.33s cubic-bezier(0.34, 1.42, 0.62, 0.96),
+  transition: transform 0.28s cubic-bezier(0.34, 1.42, 0.62, 0.96),
     box-shadow 0.22s;
-  padding: 0;
-
   overflow: hidden;
 }
 
 .colorCard:nth-last-child(2) {
-  border: 2px solid rgba(123, 123, 123, 0.184);
+  border: 2px solid rgba(123, 123, 123, 0.18);
 }
 
 .colorCard:hover {
-  transform: scale(1.06) translateY(-12px);
-  box-shadow: 0 19px 40px rgba(34, 34, 34, 0.12);
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 18px 40px rgba(34, 34, 34, 0.14);
   z-index: 10;
 }
+
 .cardContentBottom {
-  padding: 0 2rem 2.2rem 2rem;
+  padding: 0 1.8rem 2.1rem 1.8rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .cardRole {
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  opacity: 0.97;
+  margin-bottom: 0.4rem;
 }
 .cardHex {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-family: monospace;
   font-weight: 600;
-  margin-bottom: 0.54rem;
-  opacity: 0.87;
-}
-.cardUsage {
-  font-size: 1.06rem;
-  opacity: 0.83;
-  font-weight: 400;
+  opacity: 0.9;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 1100px) {
-  .contentGrid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .typographyBlock {
+    width: 94vw;
+    margin-top: 90px;
   }
-  .typographyLeft,
-  .colorsRight {
-    padding: 0;
+
+  .colorBlock {
+    width: 94vw;
+    margin-top: 3rem;
   }
-  .colorsRightRow {
+
+  .colorHeaderRow {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding-left: 0;
+    gap: 0.8rem;
   }
+
   .colorCardsGrid {
-    gap: 1.3rem;
-    min-height: 220px;
+    gap: 1.5rem;
+    min-height: 260px;
   }
+
   .colorCard {
-    width: 180px;
-    height: 210px;
-  }
-  .cardContentBottom {
-    padding: 0 1rem 1.1rem 1rem;
+    width: 200px;
+    height: 260px;
   }
 }
 
@@ -233,23 +257,28 @@
     font-size: 46px;
     top: 14%;
   }
-  .contentGrid {
-    margin-top: 50px;
-    gap: 2rem;
-  }
+
   .heading {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
   }
+
+  .typographyBlock {
+    margin-top: 60px;
+  }
+
+  .colorBlock {
+    margin-top: 2.5rem;
+  }
+
   .colorCardsGrid {
     gap: 1rem;
-    min-height: 140px;
+    min-height: 170px;
   }
   .colorCard {
-    width: 88px;
-    height: 120px;
-    border-radius: 20px;
+    width: 120px;
+    height: 160px;
   }
   .cardContentBottom {
-    padding: 0 0.4rem 0.7rem 0.5rem;
+    padding: 0 0.7rem 0.9rem 0.7rem;
   }
 }
