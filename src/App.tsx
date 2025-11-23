@@ -6,6 +6,7 @@ import MarqueeSection from './components/MarqueeSection/MarqueeSection';
 import Project from './pages/Project/Project';
 import ProjectNav from './components/ProjectNav/ProjectNav';
 import Contact from './pages/Contact/Contact';
+import TypographyPage from './pages/typography/Typography';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <MarqueeSection />
       <Project />
       <ProjectNav />
+      <TypographyPage />
       <Contact />
       <Footer />
     </>

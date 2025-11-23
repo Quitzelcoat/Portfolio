@@ -2,7 +2,7 @@
 
 ## Steps (Rough)
 
-First create skeleton of the website by doing the following. You don't need to focus on design just the layout is enough.
+### First create skeleton of the website by doing the following. You don't need to focus on design just the layout is enough.
 
 1.  Create the main page set up the text in the middle. (Done)
 2.  Create the navbar upside of it. Leave the logo place empty for now. (Done)
@@ -15,7 +15,7 @@ First create skeleton of the website by doing the following. You don't need to f
 9.  Finally to the contact page. Start it by putting some kind of call to action btn. But for now only create the skeleton. (Done)
 10. Create the bottom all right reserved footer section. (Done)
 
-Now move to design creation:
+### Now move to design creation:
 
 1.  Create the command line card on the main page and on hover and click make it reactive. (Done)
 2.  Create rainbow moving small dots on the main page. (Done)
