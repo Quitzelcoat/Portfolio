@@ -11,13 +11,11 @@ type Props = {
 const ProjectCard: React.FC<Props> = ({ project, reverse }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Track scroll progress of this card
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ['start end', 'end start'],
   });
 
-  // Transform values for parallax effect - NO rotation
   const imageY = useTransform(scrollYProgress, [0, 1], [50, -50]);
   const glassY = useTransform(scrollYProgress, [0, 1], [80, -80]);
 

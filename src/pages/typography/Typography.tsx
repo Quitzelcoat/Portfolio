@@ -3,7 +3,7 @@ import { colors } from '../../data/colorsData';
 import { fonts } from '../../data/typographyData';
 
 const TypographyPage = () => (
-  <section className={styles.typographySection}>
+  <section id="typography" className={styles.typographySection}>
     <span className={styles.typoBgText}>DESIGN</span>
 
     <div className={styles.topLeftAccent}>

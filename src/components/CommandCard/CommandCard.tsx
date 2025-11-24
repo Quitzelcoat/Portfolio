@@ -2,12 +2,11 @@ import { useRef, useState } from 'react';
 import styles from './CommandCard.module.css';
 
 type Props = {
-  initialText?: string; // existing single-line string (keeps working)
-  initialLines?: string[]; // new: preferred, array of lines
+  initialText?: string;
+  initialLines?: string[];
 };
 
 const tokenize = (text: string) => {
-  // same tokenizer you had
   const tokens = text.split(' ').map((t) => {
     if (/^(-{1,2}|--)/.test(t)) return { text: t, type: 'flag' };
     if (/=/.test(t)) return { text: t, type: 'kv' };
@@ -30,7 +29,6 @@ const CommandCard: React.FC<Props> = ({
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [copied, setCopied] = useState(false);
 
-  // Build lines array: priority to initialLines, otherwise split initialText by \n
   const lines: string[] =
     initialLines && initialLines.length > 0
       ? initialLines
@@ -46,7 +44,6 @@ const CommandCard: React.FC<Props> = ({
       setCopied(true);
       setTimeout(() => setCopied(false), 1200);
     } catch {
-      // fallback
       const ta = document.createElement('textarea');
       ta.value = text;
       ta.style.position = 'fixed';
@@ -87,7 +84,6 @@ const CommandCard: React.FC<Props> = ({
       <div
         ref={contentRef}
         className={styles.content}
-        // keep raw command(s) on data attribute for copy/read
         data-raw={lines.join('\n')}
         contentEditable={false}
         suppressContentEditableWarning
@@ -95,7 +91,6 @@ const CommandCard: React.FC<Props> = ({
       >
         {tokenLines.map((tokens, lineIndex) => (
           <div className={styles.line} key={lineIndex}>
-            {/* show a prompt for each line (looks like multiple terminal lines) */}
             <span className={styles.prompt}>➜</span>
 
             <span className={styles.commandLine}>

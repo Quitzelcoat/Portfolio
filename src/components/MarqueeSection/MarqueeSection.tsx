@@ -3,7 +3,6 @@ import marqueeStyles from './MarqueeSection.module.css';
 const MarqueeSection = () => {
   return (
     <section className={marqueeStyles.marqueeSection}>
-      {/* Line 1: Left to Right */}
       <div className={marqueeStyles.marqueeRow}>
         <div
           className={`${marqueeStyles.marqueeContent} ${marqueeStyles.leftToRight}`}
@@ -36,7 +35,6 @@ const MarqueeSection = () => {
         </div>
       </div>
 
-      {/* Line 2: Right to Left */}
       <div className={marqueeStyles.marqueeRow}>
         <div
           className={`${marqueeStyles.marqueeContent} ${marqueeStyles.rightToLeft}`}
@@ -69,7 +67,6 @@ const MarqueeSection = () => {
         </div>
       </div>
 
-      {/* Line 3: Left to Right */}
       <div className={marqueeStyles.marqueeRow}>
         <div
           className={`${marqueeStyles.marqueeContent} ${marqueeStyles.leftToRight}`}

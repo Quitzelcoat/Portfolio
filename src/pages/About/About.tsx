@@ -2,7 +2,7 @@ import aboutStyles from './About.module.css';
 
 const About = () => {
   return (
-    <section className={aboutStyles.aboutContainer}>
+    <section id="about" className={aboutStyles.aboutContainer}>
       <div className={aboutStyles.aboutTopRight}>
         <span className={aboutStyles.aboutLabel}>About</span>
         <span className={aboutStyles.aboutLine}></span>

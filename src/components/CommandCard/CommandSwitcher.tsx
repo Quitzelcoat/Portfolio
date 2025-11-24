@@ -1,4 +1,3 @@
-// src/components/CommandCard/CommandSwitcher.tsx
 import { useEffect, useState, useRef } from 'react';
 import CommandCard from './CommandCard';
 import type { CommandCardData } from '../../data/commandData';
@@ -11,18 +10,15 @@ type Props = {
 
 const CommandSwitcher: React.FC<Props> = ({ data, defaultId }) => {
   const getInitialIndex = () => {
-    // 1) try defaultId prop
     if (defaultId) {
       const i = data.findIndex((d) => d.id === defaultId);
       if (i >= 0) return i;
     }
-    // 2) try location.hash
     if (typeof window !== 'undefined' && window.location.hash) {
       const hash = window.location.hash.replace('#', '');
       const i = data.findIndex((d) => d.id === hash);
       if (i >= 0) return i;
     }
-    // default to 0
     return 0;
   };
 
@@ -30,12 +26,11 @@ const CommandSwitcher: React.FC<Props> = ({ data, defaultId }) => {
   const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
-    // update URL hash without creating history entry
     if (data[index]) {
       try {
         window.history.replaceState(null, '', `#${data[index].id}`);
       } catch {
-        /* ignore on SSR or restricted environments */
+        console.log('Could not update URL hash');
       }
     }
   }, [index, data]);
@@ -84,7 +79,6 @@ const CommandSwitcher: React.FC<Props> = ({ data, defaultId }) => {
           </button>
         ))}
 
-        {/* mobile fallback: select control (visible only on small screens) */}
         <select
           className={styles.mobileSelect}
           value={data[index].id}

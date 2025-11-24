@@ -8,7 +8,7 @@ import ScrollDown from '../../components/ScrollDown/ScrollDown';
 
 const Home: React.FC = () => {
   return (
-    <section className={homeStyles.home}>
+    <section id="home" className={homeStyles.home}>
       <DotsOverlay />
       <VerticalLine topLabel="Web Developer" />
 

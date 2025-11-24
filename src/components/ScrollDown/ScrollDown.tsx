@@ -14,7 +14,6 @@ const ScrollDown: React.FC<Props> = ({
   const handleActivate = (ev?: React.MouseEvent | React.KeyboardEvent) => {
     ev?.preventDefault();
 
-    // If target id provided and exists, scroll to it; otherwise scroll one viewport height
     if (targetId) {
       const el = document.getElementById(targetId);
       if (el) {
@@ -24,7 +23,6 @@ const ScrollDown: React.FC<Props> = ({
       }
     }
 
-    // fallback: scroll down by one viewport height
     const top = Math.min(
       window.scrollY + window.innerHeight,
       document.body.scrollHeight

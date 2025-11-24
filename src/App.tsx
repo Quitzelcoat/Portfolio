@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar/Navbar';
+import ScrollProgress from './components/ScrollProgress/ScrollProgress';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Tools from './pages/Tools/Tools';
@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <>
-      <Navbar />
+      <ScrollProgress />
       <Home />
       <About />
       <Tools />

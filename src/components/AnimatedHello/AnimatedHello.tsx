@@ -3,7 +3,7 @@ import styles from './AnimatedHello.module.css';
 
 type Props = {
   greetings?: string[];
-  interval?: number; // ms
+  interval?: number;
 };
 
 const defaultGreetings = [
@@ -29,7 +29,6 @@ const AnimatedHello: React.FC<Props> = ({
     return () => window.clearInterval(id);
   }, [greetings.length, interval]);
 
-  // using key to retrigger CSS animation on change
   return (
     <span className={styles.wrapper} aria-live="polite">
       <span key={index} className={styles.greeting}>
