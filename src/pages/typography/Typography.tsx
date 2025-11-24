@@ -11,7 +11,6 @@ const TypographyPage = () => (
       <span className={styles.sectionLine}></span>
     </div>
 
-    {/* TYPOGRAPHY BLOCK (full-width, top) */}
     <div className={styles.typographyBlock}>
       <h2 className={styles.heading}>Typography</h2>
       <div className={styles.fontsList}>
@@ -29,7 +28,6 @@ const TypographyPage = () => (
       </div>
     </div>
 
-    {/* COLOR BLOCK (full-width, under typography) */}
     <div className={styles.colorBlock}>
       <div className={styles.colorHeaderRow}>
         <h2 className={styles.heading}>Color</h2>
@@ -40,7 +38,6 @@ const TypographyPage = () => (
       </div>
     </div>
 
-    {/* COLOR CARDS – unchanged layout logic */}
     <div className={styles.colorCardsScrollWrapper}>
       <div className={styles.colorCardsGrid}>
         {colors.map((color, idx) => (

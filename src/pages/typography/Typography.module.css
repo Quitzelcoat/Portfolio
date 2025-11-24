@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 
-/* BACKDROP */
 .typoBgText {
   position: absolute;
   left: 50%;
@@ -23,7 +22,6 @@
   z-index: 0;
 }
 
-/* SECTION LABEL */
 .topLeftAccent {
   position: absolute;
   top: 2.2rem;
@@ -48,10 +46,6 @@
   opacity: 0.28;
 }
 
-/* ============= */
-/* TYPOGRAPHY    */
-/* ============= */
-
 .typographyBlock {
   max-width: 1100px;
   margin: 110px auto 0 auto;
@@ -66,7 +60,6 @@
   margin: 0 0 2rem 0;
 }
 
-/* Typography list – cleaner, vertical rhythm */
 .fontsList {
   display: flex;
   flex-direction: column;
@@ -89,7 +82,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* Font name: larger, lighter weight */
 .fontTitle {
   font-size: 1.9rem;
   color: #222222;
@@ -98,7 +90,6 @@
   margin: 0;
 }
 
-/* Badge next to title */
 .fontUsage {
   font-size: 0.9rem;
   color: #222222;
@@ -118,17 +109,12 @@
   max-width: 640px;
 }
 
-/* ============= */
-/* COLOR SECTION */
-/* ============= */
-
 .colorBlock {
   max-width: 1100px;
   margin: 4.2rem auto 0 auto;
   width: 92vw;
 }
 
-/* Color heading + text stacked but aligned like a system doc */
 .colorHeaderRow {
   display: flex;
   align-items: center;
@@ -136,20 +122,18 @@
   justify-content: space-between;
 }
 
-/* keep heading behavior */
 .colorHeaderRow .heading {
   margin-bottom: 0;
   flex-shrink: 0;
 }
 
-/* make description narrow */
 .colorDescription {
   font-size: 1.08rem;
   color: #7b7b7b;
   line-height: 1.75;
   margin: 0;
-  flex: 0 1 520px; /* <— limits width */
-  max-width: 520px; /* <— extra safety */
+  flex: 0 1 520px;
+  max-width: 520px;
 }
 
 .colorCardsScrollWrapper {
