@@ -29,8 +29,8 @@
 10. Create a typography page showing the colors used on the website and what each color represents. (Done)
 11. Make cards of the colors as well. (Done)
 12. Make the typeography intractable as well. The cards of the colors as well should be reactable. (Done)
-13. Check the contact page if there is any animation needed to be added.
-14. Remove the navbar from the top instead create one on the right side like map direction lines with pins.
+13. Check the contact page if there is any animation needed to be added. (Done)
+14. Remove the navbar from the top instead create one on the right side like map direction lines with pins. (Done)
 15. Instead on the top make is modern look with links to linkedin etc...
 16. Create the scroll right bar. And change the cursor into something smooth.
 17. Create the rainbow effect on moving the cursor. Or maybe something within the color pallet.

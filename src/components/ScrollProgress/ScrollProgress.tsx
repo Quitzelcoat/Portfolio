@@ -38,6 +38,7 @@ const ScrollProgress = () => {
       }
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -55,17 +56,22 @@ const ScrollProgress = () => {
     >
       <div className={styles.progressLine} />
       <div className={styles.dotsContainer}>
-        {sections.map((section) => (
-          <button
-            key={section.id}
-            className={`${styles.dot} ${
-              activeSection === section.id ? styles.active : ''
-            }`}
-            onClick={() => scrollToSection(section.id)}
-            aria-label={`Go to ${section.label}`}
-            title={section.label}
-          />
-        ))}
+        {sections.map((section) => {
+          const isActive = activeSection === section.id;
+          return (
+            <div key={section.id} className={styles.dotItem}>
+              {isActive && (
+                <span className={styles.dotLabel}>{section.label}</span>
+              )}
+              <button
+                className={`${styles.dot} ${isActive ? styles.active : ''}`}
+                onClick={() => scrollToSection(section.id)}
+                aria-label={`Go to ${section.label}`}
+                title={section.label}
+              />
+            </div>
+          );
+        })}
       </div>
     </nav>
   );
