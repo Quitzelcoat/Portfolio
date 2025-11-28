@@ -1,87 +1,146 @@
-import { useMemo } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './DotsOverlay.module.css';
 
-type Props = {
-  count?: number;
-  seed?: number;
+type Particle = {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  color: string;
 };
 
-function createRng(seed?: number) {
-  if (seed == null) return () => Math.random();
-  let s = Math.floor(seed) >>> 0;
-  if (s === 0) s = 1;
-  return () => {
-    s = (s * 1664525 + 1013904223) >>> 0;
-    return s / 4294967296;
-  };
-}
+const DotsOverlay: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const mouseRef = useRef({ x: 0, y: 0 });
+  const animationRef = useRef<number | null>(null);
+  const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
 
-const DotsOverlay: React.FC<Props> = ({ count = 50, seed }) => {
-  const dots = useMemo(() => {
-    const rng = createRng(seed);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    type Dot = {
-      left: string;
-      top: string;
-      width: string;
-      height: string;
-      opacity: number;
-      background: string;
-      styleVars: React.CSSProperties;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    ctxRef.current = ctx;
+
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    const out: Dot[] = [];
-    for (let i = 0; i < Math.max(0, Math.floor(count)); i++) {
-      const left = +(rng() * 100).toFixed(2) + '%';
-      const top = +(rng() * 100).toFixed(2) + '%';
-      const size = Math.round(8 + rng() * 28) + 'px'; // 8-36px
-      const hue = Math.round(rng() * 360);
-      const opacity = +(0.12 + rng() * 0.45).toFixed(3); // 0.12 - 0.57
-      const dur = +(12 + rng() * 22).toFixed(2); // 12 - 34 seconds
-      const delay = +(-rng() * dur).toFixed(2); // negative so mid-animation
-      const hueDur = Math.max(8, +(dur * 0.6).toFixed(2));
-      const hueDelay = +(delay / 2).toFixed(2);
+    // Mouse tracking
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseRef.current = { x: e.clientX, y: e.clientY };
+    };
+    window.addEventListener('mousemove', handleMouseMove);
 
-      const colorA = `hsl(${hue} 85% 60%)`;
-      const colorB = `hsl(${(hue + 40) % 360} 85% 62%)`;
-      const bg = `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.18) 18%, transparent 48%), linear-gradient(180deg, ${colorA}, ${colorB})`;
+    // Initialize particles
+    const particleCount = Math.min(
+      80,
+      Math.floor((canvas.width * canvas.height) / 15000)
+    );
+    const particles: Particle[] = [];
 
-      out.push({
-        left,
-        top,
-        width: size,
-        height: size,
-        opacity,
-        background: bg,
-        styleVars: {
-          '--dur': `${dur}s`,
-          '--delay': `${delay}s`,
-          '--huedur': `${hueDur}s`,
-          '--hueddelay': `${hueDelay}s`,
-        } as React.CSSProperties,
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.8,
+        vy: (Math.random() - 0.5) * 0.8,
+        size: Math.random() * 3 + 1.5,
+        color: Math.random() > 0.5 ? '#7B7B7B' : '#222222',
       });
     }
-    return out;
-  }, [count, seed]);
+    particlesRef.current = particles;
+
+    // Animation loop
+    const animate = () => {
+      if (!ctxRef.current || !canvasRef.current) return;
+      const ctx = ctxRef.current;
+      const canvas = canvasRef.current;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw particles
+      particlesRef.current.forEach((particle, i) => {
+        // Mouse interaction
+        const dx = mouseRef.current.x - particle.x;
+        const dy = mouseRef.current.y - particle.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const maxDistance = 120;
+
+        if (distance < maxDistance) {
+          const force = (maxDistance - distance) / maxDistance;
+          particle.vx -= (dx / distance) * force * 0.08;
+          particle.vy -= (dy / distance) * force * 0.08;
+        }
+
+        // Apply velocity
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Damping
+        particle.vx *= 0.985;
+        particle.vy *= 0.985;
+
+        // Bounce off edges
+        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+        // Keep in bounds
+        particle.x = Math.max(0, Math.min(canvas.width, particle.x));
+        particle.y = Math.max(0, Math.min(canvas.height, particle.y));
+
+        // Draw particle
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = 0.4 + Math.random() * 0.3;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.globalAlpha = 1;
+
+        // Draw connections
+        for (let j = i + 1; j < particlesRef.current.length; j++) {
+          const other = particlesRef.current[j];
+          const dx2 = other.x - particle.x;
+          const dy2 = other.y - particle.y;
+          const distance2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+
+          if (distance2 < 80) {
+            ctx.strokeStyle = particle.color;
+            ctx.globalAlpha = ((80 - distance2) / 80) * 0.15;
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(other.x, other.y);
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+          }
+        }
+      });
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div className={styles.overlay} aria-hidden="true">
-      {dots.map((d, i) => (
-        <span
-          key={i}
-          className={styles.dot}
-          style={{
-            left: d.left,
-            top: d.top,
-            width: d.width,
-            height: d.height,
-            opacity: d.opacity,
-            background: d.background,
-            ...(d.styleVars as object),
-          }}
-        />
-      ))}
-    </div>
+    <canvas ref={canvasRef} className={styles.canvas} aria-hidden="true" />
   );
 };
 

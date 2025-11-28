@@ -1,6 +1,6 @@
 export type Skill = {
   name: string;
-  icon: string; // path to SVG or image
+  icon: string;
 };
 
 export const toolsData = {

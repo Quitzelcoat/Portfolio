@@ -1,4 +1,5 @@
 import homeStyles from './Home.module.css';
+import SocialIcons from '../../components/NavIcon/SocialIcons';
 import CommandSwitcher from '../../components/CommandCard/CommandSwitcher';
 import AnimatedHello from '../../components/AnimatedHello/AnimatedHello';
 import { commandData } from '../../data/commandData';
@@ -10,6 +11,9 @@ const Home: React.FC = () => {
   return (
     <section id="home" className={homeStyles.home}>
       <DotsOverlay />
+
+      <SocialIcons />
+
       <VerticalLine topLabel="Web Developer" />
 
       <div className={homeStyles.textContainerOne}>

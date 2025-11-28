@@ -31,11 +31,11 @@
 12. Make the typeography intractable as well. The cards of the colors as well should be reactable. (Done)
 13. Check the contact page if there is any animation needed to be added. (Done)
 14. Remove the navbar from the top instead create one on the right side like map direction lines with pins. (Done)
-15. Instead on the top make is modern look with links to linkedin etc...
-16. Create the scroll right bar. And change the cursor into something smooth.
-17. Create the rainbow effect on moving the cursor. Or maybe something within the color pallet.
-18. Fix the animation dots on the home make.
-19. Create all the animations left on the webpage.
+15. Instead on the top make is modern look with links to linkedin etc... (Done)
+16. Fix the animation dots on the home make. (Done)
+17. Create the scroll right bar. And change the cursor into something smooth.
+18. Create the rainbow effect on moving the cursor. Or maybe something within the color pallet.
+19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling.
 20. Create dark theme.
 21. Now fix it for mobile and tablet version.
 22. Fix the projects needed to be attached to the portfolio.

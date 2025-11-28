@@ -1,0 +1,107 @@
+.socialIcons {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* Icon link container */
+.iconLink {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(248, 248, 248, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(123, 123, 123, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(34, 34, 34, 0.06);
+}
+
+/* Icon itself */
+.icon {
+  width: 18px;
+  height: 18px;
+  color: #7b7b7b;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover effects */
+.iconLink:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(34, 34, 34, 0.12);
+  border-color: rgba(34, 34, 34, 0.25);
+}
+
+.iconLink:hover .icon {
+  color: #222222;
+  transform: scale(1.1);
+}
+
+/* Brand-specific colors on hover */
+.iconLink[title='GitHub']:hover .icon {
+  color: #333333;
+}
+
+.iconLink[title='LinkedIn']:hover .icon {
+  color: #0077b5;
+}
+
+.iconLink[title='Instagram']:hover .icon {
+  color: #e4405f;
+}
+
+/* Subtle pulse animation on page load */
+@keyframes iconPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.socialIcons .iconLink:nth-child(1) {
+  animation: iconPulse 0.4s ease-out 0.1s both;
+}
+.socialIcons .iconLink:nth-child(2) {
+  animation: iconPulse 0.4s ease-out 0.2s both;
+}
+.socialIcons .iconLink:nth-child(3) {
+  animation: iconPulse 0.4s ease-out 0.3s both;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .socialIcons {
+    top: 1.5rem;
+    left: 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .iconLink {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .socialIcons {
+    top: 1rem;
+    left: 1rem;
+  }
+}

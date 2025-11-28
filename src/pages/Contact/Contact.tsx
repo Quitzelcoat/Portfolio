@@ -1,5 +1,5 @@
 import styles from './Contact.module.css';
-// import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
               aria-label="GitHub"
               className={styles.iconLink}
             >
-              {/* <FaGithub /> */}
+              <FaGithub />
             </a>
             <a
               href="https://www.linkedin.com/in/pedro-klepa/"
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
               aria-label="LinkedIn"
               className={styles.iconLink}
             >
-              {/* <FaLinkedin /> */}
+              <FaLinkedin />
             </a>
           </div>
         </div>
