@@ -1,8 +1,15 @@
+html,
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: #222222;
   overflow-x: hidden;
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
 }
 
 h1,

@@ -1,11 +1,9 @@
-/* ScrollDown.module.css - bottom-left helper */
 :root {
   --primary: #222222;
   --secondary: #7b7b7b;
   --tertiary: #f8f8f8;
 }
 
-/* container is a button for accessibility */
 .container {
   position: absolute;
   left: 3rem;
@@ -17,16 +15,13 @@
   border: none;
   padding: 8px 12px;
   border-radius: 999px;
-  cursor: pointer;
   color: var(--secondary);
   font-weight: 700;
   font-size: 0.84rem;
-  z-index: 60; /* above hero content */
+  z-index: 60;
   transition: transform 160ms ease, color 160ms ease, box-shadow 160ms;
-  /* box-shadow: 0 6px 18px rgba(34, 34, 34, 0.04); */
 }
 
-/* subtle hover lift */
 .container:hover,
 .container:focus {
   transform: translateY(-4px);
@@ -34,7 +29,6 @@
   outline: none;
 }
 
-/* label text */
 .label {
   letter-spacing: 0.02em;
   text-transform: lowercase;
@@ -43,7 +37,6 @@
   vertical-align: middle;
 }
 
-/* arrow wrapper for easy animation control */
 .arrowWrapper {
   display: inline-flex;
   align-items: center;
@@ -55,7 +48,6 @@
   box-shadow: 0 6px 12px rgba(11, 18, 32, 0.06);
 }
 
-/* svg arrow inherits color */
 .arrow {
   color: var(--secondary);
   display: block;
@@ -64,7 +56,6 @@
   will-change: transform;
 }
 
-/* bounce animation */
 @keyframes arrowBounce {
   0% {
     transform: translateY(0);
@@ -77,19 +68,16 @@
   }
 }
 
-/* infinite subtle bounce and color shift */
 .container .arrow {
   animation: arrowBounce 1.6s ease-in-out infinite;
 }
 
-/* on hover, more pronounced */
 .container:hover .arrow,
 .container:focus .arrow {
   transform: translateY(6px) scale(1.02);
   color: var(--primary);
 }
 
-/* responsive: slightly smaller on small screens */
 @media (max-width: 520px) {
   .container {
     left: 12px;
@@ -100,10 +88,9 @@
   }
   .label {
     display: none;
-  } /* hide text on very small screens if you prefer */
+  }
 }
 
-/* respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .container,
   .arrow {

@@ -1,3 +1,4 @@
+import CustomCursor from './components/CustomCursor/CustomCursor';
 import ScrollProgress from './components/ScrollProgress/ScrollProgress';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -12,6 +13,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <>
+      <CustomCursor />
       <ScrollProgress />
       <Home />
       <About />

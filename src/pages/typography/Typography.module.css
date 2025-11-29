@@ -163,7 +163,6 @@
   box-shadow: none;
   border: none;
   position: relative;
-  cursor: pointer;
   transition: transform 0.28s cubic-bezier(0.34, 1.42, 0.62, 0.96),
     box-shadow 0.22s;
   overflow: hidden;

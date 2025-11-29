@@ -1,0 +1,73 @@
+.cursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #222222; /* Primary */
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(-100px, -100px, 0);
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  will-change: transform;
+}
+
+/* Scale up when moving */
+.dotMoving {
+  width: 10px;
+  height: 10px;
+  background: #7b7b7b; /* Secondary */
+}
+
+/* Hover state on interactive elements */
+.dotHover {
+  width: 14px;
+  height: 14px;
+  background: #f8f8f8; /* Tertiary */
+  box-shadow: 0 0 0 2px rgba(34, 34, 34, 0.2);
+}
+
+/* Trail particles */
+.trailParticle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.6;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.5s ease;
+  will-change: transform, opacity;
+}
+
+/* Global cursor reset (add to your global CSS) */
+html,
+body {
+  cursor: none;
+}
+
+a,
+button,
+[role='button'],
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cursorDot {
+    transition: none;
+  }
+  .trailParticle {
+    animation: none;
+    opacity: 0 !important;
+  }
+}

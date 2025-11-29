@@ -33,8 +33,8 @@
 14. Remove the navbar from the top instead create one on the right side like map direction lines with pins. (Done)
 15. Instead on the top make is modern look with links to linkedin etc... (Done)
 16. Fix the animation dots on the home make. (Done)
-17. Create the scroll right bar. And change the cursor into something smooth.
-18. Create the rainbow effect on moving the cursor. Or maybe something within the color pallet.
+17. Create the scroll right bar. And change the cursor into something smooth. (Done)
+18. Create the rainbow effect on moving the cursor. Or maybe something within the color pallet. (Done)
 19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling.
 20. Create dark theme.
 21. Now fix it for mobile and tablet version.
