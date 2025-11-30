@@ -7,12 +7,11 @@
   gap: 0.8rem;
 }
 
-/* Icon link container */
 .iconLink {
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  background: rgba(248, 248, 248, 0.7);
+  background: var(--bg-secondary);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(123, 123, 123, 0.15);
@@ -24,15 +23,13 @@
   box-shadow: 0 4px 12px rgba(34, 34, 34, 0.06);
 }
 
-/* Icon itself */
 .icon {
   width: 18px;
   height: 18px;
-  color: #7b7b7b;
+  color: var(--secondary);
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
-/* Hover effects */
 .iconLink:hover {
   background: #ffffff;
   transform: translateY(-2px);
@@ -41,11 +38,10 @@
 }
 
 .iconLink:hover .icon {
-  color: #222222;
+  color: var(--primary);
   transform: scale(1.1);
 }
 
-/* Brand-specific colors on hover */
 .iconLink[title='GitHub']:hover .icon {
   color: #333333;
 }
@@ -58,7 +54,6 @@
   color: #e4405f;
 }
 
-/* Subtle pulse animation on page load */
 @keyframes iconPulse {
   0% {
     transform: scale(0.9);
@@ -80,7 +75,6 @@
   animation: iconPulse 0.4s ease-out 0.3s both;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .socialIcons {
     top: 1.5rem;

@@ -1,9 +1,3 @@
-:root {
-  --primary: #222222;
-  --secondary: #7b7b7b;
-  --tertiary: #f8f8f8;
-}
-
 .container {
   position: absolute;
   left: 3rem;
@@ -44,8 +38,9 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(var(--tertiary), 0.7);
   box-shadow: 0 6px 12px rgba(11, 18, 32, 0.06);
+  transition: background 0.25s ease;
 }
 
 .arrow {
@@ -78,6 +73,27 @@
   color: var(--primary);
 }
 
+/* Dark mode styles */
+.dark .container {
+  color: var(--text-secondary); /* Make text lighter */
+}
+
+.dark .container:hover,
+.dark .container:focus {
+  color: var(--text-primary);
+}
+
+.dark .arrowWrapper {
+  background: rgba(34, 34, 34, 0.7);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+.dark .container:hover .arrow,
+.dark .container:focus .arrow {
+  color: var(--text-primary);
+}
+
+/* Responsive and reduced motion remain unchanged */
 @media (max-width: 520px) {
   .container {
     left: 12px;

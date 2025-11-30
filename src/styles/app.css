@@ -1,10 +1,38 @@
+:root {
+  --primary: #222222;
+  --secondary: #7b7b7b;
+  --tertiary: #f8f8f8;
+  --white: #ffffff;
+
+  --bg-primary: #f8f8f8;
+  --bg-secondary: #ffffff;
+  --text-primary: #222222;
+  --text-secondary: rgba(34, 34, 34, 0.6);
+}
+
+/* Dark theme */
+html.dark {
+  --primary: #ffffff;
+  --secondary: #d0d0d0;
+  --tertiary: #1a1a1a;
+  --white: #222222;
+
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #f8f8f8;
+  --text-secondary: rgba(248, 248, 248, 0.6);
+}
+
 html,
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  color: #222222;
   overflow-x: hidden;
   cursor: none;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a,

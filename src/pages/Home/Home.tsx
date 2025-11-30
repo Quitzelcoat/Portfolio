@@ -1,5 +1,7 @@
 import homeStyles from './Home.module.css';
 import SocialIcons from '../../components/NavIcon/SocialIcons';
+import ThemeToggle from '../../components/contexts/ThemeToggle';
+import { useTheme } from '../../components/contexts/useTheme';
 import CommandSwitcher from '../../components/CommandCard/CommandSwitcher';
 import AnimatedHello from '../../components/AnimatedHello/AnimatedHello';
 import { commandData } from '../../data/commandData';
@@ -8,11 +10,15 @@ import VerticalLine from '../../components/VerticalLine/VerticalLine';
 import ScrollDown from '../../components/ScrollDown/ScrollDown';
 
 const Home: React.FC = () => {
+  const { theme } = useTheme();
+
   return (
     <section id="home" className={homeStyles.home}>
-      <DotsOverlay />
+      <DotsOverlay theme={theme} />
 
       <SocialIcons />
+
+      <ThemeToggle />
 
       <VerticalLine topLabel="Web Developer" />
 

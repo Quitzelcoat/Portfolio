@@ -1,3 +1,4 @@
+import { ThemeProvider } from './components/contexts/ThemeProvider';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import ScrollProgress from './components/ScrollProgress/ScrollProgress';
 import Home from './pages/Home/Home';
@@ -12,7 +13,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <CustomCursor />
       <ScrollProgress />
       <Home />
@@ -24,7 +25,7 @@ function App() {
       <TypographyPage />
       <Contact />
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

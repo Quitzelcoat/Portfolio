@@ -1,5 +1,6 @@
 .home {
-  background-color: #f8f8f8;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
   display: grid;
   grid-template-columns: 55% 45%;
@@ -8,6 +9,7 @@
   align-items: center;
   box-sizing: border-box;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .textContainerOne {
@@ -32,7 +34,7 @@
   font-size: 4.2rem;
   line-height: 1;
   margin: 0;
-  color: #222222;
+  color: var(--text-primary);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
@@ -40,12 +42,12 @@
 .infoText {
   margin-top: 0.6rem;
   font-size: 1.05rem;
-  color: rgba(34, 34, 34, 0.6);
+  color: var(--text-secondary);
   line-height: 1.35;
 }
 
 .infoText > span {
-  color: #7b7b7b;
+  color: var(--secondary);
   font-weight: 800;
   font-size: 1.08rem;
   margin-left: 6px;

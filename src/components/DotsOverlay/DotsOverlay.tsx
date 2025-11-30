@@ -10,7 +10,7 @@ type Particle = {
   color: string;
 };
 
-const DotsOverlay: React.FC = () => {
+const DotsOverlay: React.FC<{ theme: 'light' | 'dark' }> = ({ theme }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -47,13 +47,17 @@ const DotsOverlay: React.FC = () => {
     const particles: Particle[] = [];
 
     for (let i = 0; i < particleCount; i++) {
+      const baseColor = theme === 'light' ? '#7B7B7B' : '#F8F8F8';
+      const altColor = theme === 'light' ? '#222222' : '#7B7B7B';
+
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.8,
         vy: (Math.random() - 0.5) * 0.8,
         size: Math.random() * 3 + 1.5,
-        color: Math.random() > 0.5 ? '#7B7B7B' : '#222222',
+        // Alternate colors respecting palette and theme
+        color: Math.random() > 0.5 ? baseColor : altColor,
       });
     }
     particlesRef.current = particles;
@@ -137,7 +141,7 @@ const DotsOverlay: React.FC = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas ref={canvasRef} className={styles.canvas} aria-hidden="true" />
