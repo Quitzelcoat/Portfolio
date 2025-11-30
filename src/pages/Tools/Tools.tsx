@@ -21,16 +21,19 @@ const Tools = () => (
         <div className={toolStyle.toolCard} key={card.label}>
           <h3>{card.label}</h3>
           <div className={toolStyle.skillsGrid}>
-            {toolsData[card.key].map((skill) => (
-              <div className={toolStyle.skillBox} key={skill.name}>
-                <img
-                  src={skill.icon}
-                  alt={skill.name + ' icon'}
-                  className={toolStyle.skillIcon}
-                />
-                <span className={toolStyle.skillName}>{skill.name}</span>
-              </div>
-            ))}
+            {toolsData[card.key].map((skill) => {
+              const IconComponent = skill.icon;
+              return (
+                <div className={toolStyle.skillBox} key={skill.name}>
+                  <IconComponent
+                    className={toolStyle.skillIcon}
+                    aria-label={skill.name + ' icon'}
+                    title={skill.name}
+                  />
+                  <span className={toolStyle.skillName}>{skill.name}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}
