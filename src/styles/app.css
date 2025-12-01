@@ -4,6 +4,7 @@
   --tertiary: #f8f8f8;
   --white: #ffffff;
 
+  --primary-rgb: 34, 34, 34;
   --bg-primary: #f8f8f8;
   --bg-secondary: #ffffff;
   --text-primary: #222222;
@@ -20,9 +21,11 @@ html.dark {
   --tertiary: #1a1a1a;
   --white: #222222;
 
+  --primary-rgb: 248, 248, 248;
   --bg-primary: #0f0f0f;
   --bg-secondary: #1a1a1a;
   --text-primary: #f8f8f8;
+  --tertiary-hover: #2a2a2a;
   --text-secondary: rgba(248, 248, 248, 0.6);
 
   --glass-bg: rgba(34, 34, 34, 0.22);
