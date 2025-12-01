@@ -1,5 +1,5 @@
 import styles from './Contact.module.css';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   return (
@@ -42,6 +42,15 @@ const Contact: React.FC = () => {
               className={styles.iconLink}
             >
               <FaLinkedin />
+            </a>
+            <a
+              href="https://www.instagram.com/direstate"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className={styles.iconLink}
+            >
+              <FaInstagram />
             </a>
           </div>
         </div>

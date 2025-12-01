@@ -2,9 +2,11 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background: #f8f8f8;
+  background: var(--bg-primary);
   padding: 6rem 0 5rem 0;
   overflow: hidden;
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .typoBgText {
@@ -14,7 +16,8 @@
   transform: translate(-50%, -50%);
   font-size: 110px;
   font-weight: 900;
-  color: #22222210;
+  color: var(--primary);
+  opacity: 0.05;
   letter-spacing: 0.32em;
   white-space: nowrap;
   user-select: none;
@@ -30,18 +33,20 @@
   align-items: center;
   z-index: 10;
 }
+
 .sectionLabel {
   font-size: 1.3rem;
-  color: #222222;
+  color: var(--primary);
   font-weight: 600;
   letter-spacing: 0.1em;
   margin-right: 1.1rem;
 }
+
 .sectionLine {
   display: inline-block;
   height: 2px;
   width: 225px;
-  background: #222222;
+  background: var(--primary);
   border-radius: 1px;
   opacity: 0.28;
 }
@@ -54,7 +59,7 @@
 
 .heading {
   font-size: 3.8rem;
-  color: #222222;
+  color: var(--primary);
   font-weight: 350;
   letter-spacing: 0.01em;
   margin: 0 0 2rem 0;
@@ -71,6 +76,10 @@
   border-bottom: 1px solid rgba(123, 123, 123, 0.18);
 }
 
+.dark .fontItem {
+  border-color: rgba(208, 208, 208, 0.2);
+}
+
 .fontItem:last-of-type {
   border-bottom: none;
 }
@@ -84,7 +93,7 @@
 
 .fontTitle {
   font-size: 1.9rem;
-  color: #222222;
+  color: var(--primary);
   font-weight: 350;
   letter-spacing: 0.01em;
   margin: 0;
@@ -92,8 +101,8 @@
 
 .fontUsage {
   font-size: 0.9rem;
-  color: #222222;
-  background: #f0f0f0;
+  color: var(--primary);
+  background: var(--tertiary);
   padding: 4px 10px;
   border-radius: 999px;
   font-weight: 600;
@@ -103,7 +112,7 @@
 
 .fontDescription {
   font-size: 1.02rem;
-  color: #7b7b7b;
+  color: var(--secondary);
   margin: 0;
   line-height: 1.7;
   max-width: 640px;
@@ -129,7 +138,7 @@
 
 .colorDescription {
   font-size: 1.08rem;
-  color: #7b7b7b;
+  color: var(--secondary);
   line-height: 1.75;
   margin: 0;
   flex: 0 1 520px;
@@ -140,6 +149,7 @@
   width: 100%;
   overflow-x: auto;
 }
+
 .colorCardsGrid {
   display: flex;
   justify-content: center;

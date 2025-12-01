@@ -34,8 +34,8 @@
 15. Instead on the top make is modern look with links to linkedin etc... (Done)
 16. Fix the animation dots on the home make. (Done)
 17. Create the scroll right bar. And change the cursor into something smooth. (Done)
-18. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling.
-19. Create dark theme.
+18. Create dark theme. (Done)
+19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling.
 20. Now fix it for mobile and tablet version.
 21. Fix the projects needed to be attached to the portfolio.
 22. Create projects images as well to put in the portfolio.
