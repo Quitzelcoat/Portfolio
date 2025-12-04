@@ -11,7 +11,6 @@
   overflow: hidden;
 }
 
-/* backdrop "SKILLS" text */
 .toolsBgText {
   position: absolute;
   top: 38%;
@@ -26,6 +25,7 @@
   pointer-events: none;
   z-index: 0;
   white-space: nowrap;
+  will-change: transform, opacity;
 }
 
 .topLeftAccent {
@@ -53,7 +53,6 @@
   opacity: 0.7;
 }
 
-/* Card grid (three columns) */
 .toolsGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 1fr));
@@ -64,7 +63,6 @@
   z-index: 2;
 }
 
-/* Enhanced glassmorphism card */
 .toolCard {
   background: rgba(var(--white-rgb), 0.25);
   color: var(--primary);
@@ -75,6 +73,7 @@
   border-radius: 0;
   padding: 2rem 1.4rem 2.2rem 1.4rem;
   display: flex;
+  will-change: transform, opacity;
   flex-direction: column;
   align-items: flex-start;
   min-height: 340px;
@@ -116,14 +115,13 @@
   flex-direction: column;
   align-items: center;
   padding: 0.6rem 0.4rem;
-  /* cursor: pointer; */
+  will-change: transform, opacity;
   border-radius: 10px;
   transition: transform 0.35s ease, background 0.35s ease;
   width: calc(33.333% - 0.8rem);
   max-width: 85px;
 }
 
-/* Alternate row widths: 3 items, then 2 items */
 .skillBox:nth-child(3n + 4),
 .skillBox:nth-child(3n + 5) {
   width: calc(50% - 0.6rem);
@@ -140,7 +138,9 @@
   height: 34px;
   object-fit: contain;
   margin-bottom: 0.5rem;
+  will-change: transform;
 }
+
 .skillName {
   font-size: 0.88rem;
   color: #7b7b7b;
@@ -148,7 +148,6 @@
   line-height: 1.2;
 }
 
-/* Button styling */
 .letsMeetContainer {
   display: flex;
   justify-content: center;
@@ -193,7 +192,6 @@
   box-shadow: 0 6px 20px rgba(34, 34, 34, 0.08), 0 0 0 4px rgba(0, 0, 0, 0.04);
 }
 
-/* Responsive tweaks */
 @media (max-width: 960px) {
   .toolsGrid {
     grid-template-columns: 1fr;

@@ -35,12 +35,15 @@
 16. Fix the animation dots on the home make. (Done)
 17. Create the scroll right bar. And change the cursor into something smooth. (Done)
 18. Create dark theme. (Done)
-19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling.
-20. Now fix it for mobile and tablet version.
-21. Fix the projects needed to be attached to the portfolio.
+19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling. (Done)
+20. Fix the projects needed to be attached to the portfolio.
+21. Attach the projects to the portfolio.
 22. Create projects images as well to put in the portfolio.
-23. Link to clandely and also write all the text and different links places.
-24. Make the resume btn work.
+23. Fix the portfolio text.
+24. Now fix it for mobile and tablet version.
+25. Upload it online and create a domain.
+26. Link to clandely and also write all the text and different links places.
+27. Make the resume btn work.
 
 ## Colors:
 

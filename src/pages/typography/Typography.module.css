@@ -178,6 +178,23 @@
   overflow: hidden;
 }
 
+.copiedBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  transform-origin: center;
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+  z-index: 20;
+  will-change: opacity, transform;
+}
+
 .colorCard:nth-last-child(2) {
   border: 2px solid rgba(123, 123, 123, 0.18);
 }
