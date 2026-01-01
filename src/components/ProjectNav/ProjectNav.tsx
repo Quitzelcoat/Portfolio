@@ -12,7 +12,7 @@ const ProjectNav = () => {
   return (
     <section className={styles.projectNavSection}>
       <div className={styles.navHeader}>
-        <h3 className={styles.navTitle}>Quick Access</h3>
+        <h3 className={styles.navTitle}>Honorable Mentions</h3>
         <p className={styles.navSubtitle}>Jump to any project</p>
       </div>
       <div className={styles.projectsGrid}>

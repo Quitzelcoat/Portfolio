@@ -13,14 +13,32 @@
 }
 
 .imageCardContainer {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  display: block;
   position: relative;
-  width: 540px;
-  height: 400px;
-  min-width: 440px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  cursor: none;
+}
+
+.imageCardContainer:focus-visible {
+  outline: 1px solid rgba(var(--primary-rgb), 0.35);
+  outline-offset: 6px;
+}
+
+.projectTitleButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: none;
+}
+
+.projectTitleButton:focus-visible {
+  outline: 1px solid rgba(var(--primary-rgb), 0.35);
+  outline-offset: 4px;
 }
 
 /* Glass background card: NO SHADOW, more glassy, straight (no tilt) */

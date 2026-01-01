@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './components/contexts/ThemeProvider';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import ScrollProgress from './components/ScrollProgress/ScrollProgress';
@@ -10,21 +11,42 @@ import ProjectNav from './components/ProjectNav/ProjectNav';
 import Contact from './pages/Contact/Contact';
 import TypographyPage from './pages/typography/Typography';
 import Footer from './components/Footer/Footer';
+import ProjectDetailPage from './pages/ProjectDetail/ProjectDetailPage';
 
 function App() {
   return (
     <ThemeProvider>
-      <CustomCursor />
-      <ScrollProgress />
-      <Home />
-      <About />
-      <Tools />
-      <MarqueeSection />
-      <Project />
-      <ProjectNav />
-      <TypographyPage />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <CustomCursor />
+                <ScrollProgress />
+                <Home />
+                <About />
+                <Tools />
+                <MarqueeSection />
+                <Project />
+                <ProjectNav />
+                <TypographyPage />
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/projects/:projectId"
+            element={
+              <>
+                <CustomCursor />
+                <ProjectDetailPage />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

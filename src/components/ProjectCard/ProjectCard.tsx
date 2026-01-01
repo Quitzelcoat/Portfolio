@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import styles from './ProjectCard.module.css';
 import type { Project } from '../../data/projectsData';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
   project: Project;
@@ -10,6 +11,7 @@ type Props = {
 
 const ProjectCard: React.FC<Props> = ({ project, reverse }) => {
   const cardRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -18,6 +20,10 @@ const ProjectCard: React.FC<Props> = ({ project, reverse }) => {
 
   const imageY = useTransform(scrollYProgress, [0, 1], [50, -50]);
   const glassY = useTransform(scrollYProgress, [0, 1], [80, -80]);
+
+  const handleOpen = () => {
+    navigate(`/projects/${project.id}`);
+  };
 
   return (
     <motion.div
@@ -28,7 +34,11 @@ const ProjectCard: React.FC<Props> = ({ project, reverse }) => {
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
-      <div className={styles.imageCardContainer}>
+      <button
+        type="button"
+        className={styles.imageCardContainer}
+        onClick={handleOpen}
+      >
         <motion.div className={styles.glassBgCard} style={{ y: glassY }} />
         <motion.img
           src={project.imageUrl}
@@ -36,9 +46,16 @@ const ProjectCard: React.FC<Props> = ({ project, reverse }) => {
           className={styles.projectImg}
           style={{ y: imageY }}
         />
-      </div>
+      </button>
+
       <div className={styles.projectDetails}>
-        <h3 className={styles.projectTitle}>{project.title}</h3>
+        <button
+          type="button"
+          className={styles.projectTitleButton}
+          onClick={handleOpen}
+        >
+          <h3 className={styles.projectTitle}>{project.title}</h3>
+        </button>
         <p className={styles.projectDesc}>{project.description}</p>
         <div className={styles.techList}>
           {project.tech.map((tech) => (
