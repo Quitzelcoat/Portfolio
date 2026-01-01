@@ -37,7 +37,7 @@
 18. Create dark theme. (Done)
 19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling. (Done)
 20. Fix the projects needed to be attached to the portfolio. (Done)
-21. Create each project pages to show details of personal projects on the portfolio.
+21. Create each project pages to show details of personal projects on the portfolio. (Done)
 22. Fix the portfolio for mobile and tablet version.
 23. Upload it online and create a domain.
 24. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them.
