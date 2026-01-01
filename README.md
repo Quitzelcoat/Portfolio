@@ -36,14 +36,18 @@
 17. Create the scroll right bar. And change the cursor into something smooth. (Done)
 18. Create dark theme. (Done)
 19. Create all the animations left on the webpage. Including animating the page for all the stuff comes up while scrolling. (Done)
-20. Fix the projects needed to be attached to the portfolio.
-21. Attach the projects to the portfolio.
-22. Create projects images as well to put in the portfolio.
-23. Fix the portfolio text.
-24. Now fix it for mobile and tablet version.
-25. Upload it online and create a domain.
-26. Link to clandely and also write all the text and different links places.
-27. Make the resume btn work.
+20. Fix the projects needed to be attached to the portfolio. (Done)
+21. Create each project pages to show details of personal projects on the portfolio.
+22. Fix the portfolio for mobile and tablet version.
+23. Upload it online and create a domain.
+24. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them.
+25. Upload the projects online.
+26. Create projects images as well to put in the portfolio.
+27. Attach the projects to the portfolio. Make sure to fix each project pages and their text.
+28. Fix the portfolio text.
+29. Link to clandely and also write all the text and different links places.
+30. Make the resume btn work.
+31. Upload the new portfolio changes online.
 
 ## Colors:
 
