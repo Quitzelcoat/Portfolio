@@ -7,6 +7,7 @@
   position: relative;
   overflow: hidden;
   color: var(--text-primary);
+  gap: 4rem; /* Add consistent gap */
 }
 
 .aboutTopRight {
@@ -38,7 +39,7 @@
 .aboutBgText {
   position: absolute;
   top: 40%;
-  left: 20%; /* <- center horizontally */
+  left: 20%;
   transform: translate(-50%, -50%);
   font-size: 15rem;
   font-weight: 500;
@@ -52,17 +53,6 @@
   will-change: transform, opacity;
 }
 
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 3;
-  will-change: transform;
-  transform: translateZ(0);
-}
-
 .imgContainer {
   flex-shrink: 0;
   width: 450px;
@@ -70,6 +60,7 @@
   position: relative;
   left: 0;
   background-color: var(--bg-secondary);
+  margin-right: 2rem; /* Prevent sticking to text */
 }
 
 .imgLine {
@@ -86,20 +77,25 @@
   pointer-events: none;
 }
 
-.imgContainer img {
+.img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  position: relative;
+  z-index: 3;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
+/* FIXED: More compact article with scroll */
 .aboutArticle {
   flex: 1;
-  max-width: 600px;
+  max-width: 520px; /* Reduced from 600px - more compact */
   max-height: 70vh;
   overflow-y: auto;
-  padding: 0 2rem;
-  margin: 0 10rem;
+  padding: 0 1.5rem; /* Reduced padding */
+  margin: 0 4rem 0 0; /* Reduced right margin */
   color: var(--text-primary);
 }
 
@@ -108,6 +104,7 @@
   color: var(--text-primary);
   margin: 0 0 1.5rem 0;
   font-weight: 700;
+  text-align: center; /* CENTERED TITLE */
   position: sticky;
   top: 0;
   background: var(--bg-primary);
@@ -126,6 +123,7 @@
   color: #ff5733;
 }
 
+/* Custom scrollbar - now works at all sizes */
 .aboutArticle::-webkit-scrollbar {
   width: 6px;
 }
@@ -144,16 +142,19 @@
   background: rgba(123, 123, 123, 0.5);
 }
 
+/* RESPONSIVE: Better breakpoints */
 @media (max-width: 1200px) {
   .aboutContainer {
     flex-direction: column;
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
     min-height: auto;
+    gap: 3rem;
   }
 
   .aboutTopRight {
     position: static;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
   }
 
   .aboutLine {
@@ -161,21 +162,21 @@
   }
 
   .imgContainer {
-    width: 80%;
-    height: auto;
-    margin-bottom: 2rem;
+    width: 320px;
+    height: 420px;
+    margin: 0 auto 2rem;
   }
 
   .imgLine {
     top: -40px;
     right: 10px;
-    height: 500px;
+    height: 480px;
   }
 
   .aboutArticle {
-    max-width: 90%;
+    max-width: 700px; /* Wider on mobile */
     max-height: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 1rem;
   }
 }
@@ -183,10 +184,15 @@
 @media (max-width: 900px) {
   .aboutBgText {
     font-size: 8rem;
+    left: 50%;
   }
-  .imgLine {
-    top: -40px;
-    right: 10px;
-    height: 500px;
+
+  .aboutContainer {
+    padding: 3rem 1rem;
+  }
+
+  .imgContainer {
+    width: 280px;
+    height: 370px;
   }
 }
