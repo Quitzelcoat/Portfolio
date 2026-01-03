@@ -4,7 +4,6 @@ import { colors } from '../../data/colorsData';
 import { fonts } from '../../data/typographyData';
 
 const TypographyPage: React.FC = () => {
-  // index of the card that shows "Copied!" badge (or null)
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
   const handleCopyHex = async (hex: string, idx: number) => {
@@ -12,7 +11,6 @@ const TypographyPage: React.FC = () => {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(hex);
       } else {
-        // fallback for older browsers
         const textarea = document.createElement('textarea');
         textarea.value = hex;
         textarea.style.position = 'fixed';
@@ -29,7 +27,6 @@ const TypographyPage: React.FC = () => {
         1500
       );
     } catch (err) {
-      // optional: console.debug(err) or show different UI — keep minimal as requested
       console.error('Copy failed', err);
     }
   };
@@ -93,7 +90,6 @@ const TypographyPage: React.FC = () => {
                 zIndex: 10 - idx,
               }}
             >
-              {/* Copied badge (only rendered when this card was copied recently) */}
               <div
                 className={styles.copiedBadge}
                 aria-hidden={copiedIndex !== idx}

@@ -27,28 +27,31 @@
 
 .topLeftAccent {
   position: absolute;
-  top: 2.2rem;
-  left: 4rem;
+  top: clamp(1.2rem, 3vw, 2.2rem);
+  left: clamp(1.5rem, 4vw, 4rem);
   display: flex;
   align-items: center;
+  gap: clamp(0.8rem, 2vw, 1.1rem);
   z-index: 10;
 }
 
 .sectionLabel {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
   color: var(--primary);
   font-weight: 600;
-  letter-spacing: 0.1em;
-  margin-right: 1.1rem;
+  letter-spacing: clamp(0.08em, 0.12em, 0.1em);
+  white-space: nowrap;
+  margin-right: clamp(0.6rem, 1.5vw, 1.1rem);
 }
 
 .sectionLine {
   display: inline-block;
   height: 2px;
-  width: 225px;
+  width: clamp(140px, 24vw, 225px);
   background: var(--primary);
   border-radius: 1px;
   opacity: 0.28;
+  flex-shrink: 0;
 }
 
 .typographyBlock {
@@ -224,31 +227,56 @@
   opacity: 0.9;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1100px) {
-  .typographyBlock {
-    width: 94vw;
-    margin-top: 90px;
+  .colorCardsScrollWrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    scrollbar-width: thin;
   }
 
-  .colorBlock {
-    width: 94vw;
-    margin-top: 3rem;
+  .colorCardsScrollWrapper::-webkit-scrollbar {
+    height: 5px;
   }
 
-  .colorHeaderRow {
-    flex-direction: column;
-    gap: 0.8rem;
+  .colorCardsScrollWrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .colorCardsScrollWrapper::-webkit-scrollbar-thumb {
+    background: rgba(123, 123, 123, 0.4);
+    border-radius: 3px;
   }
 
   .colorCardsGrid {
-    gap: 1.5rem;
-    min-height: 260px;
+    display: flex;
+    justify-content: flex-start;
+    gap: clamp(1rem, 2.5vw, 1.8rem);
+    width: max-content;
+    padding: 0;
+    margin-top: 4rem;
   }
 
   .colorCard {
-    width: 200px;
-    height: 260px;
+    flex-shrink: 0;
+    width: clamp(180px, 22vw, 220px);
+    height: clamp(240px, 33vw, 300px);
+    position: relative;
+  }
+
+  .colorCard:nth-child(1) {
+    margin-top: clamp(-20px, -3vw, -28px);
+  }
+  .colorCard:nth-child(2) {
+    margin-top: clamp(20px, 3vw, 28px);
+  }
+  .colorCard:nth-child(3) {
+    margin-top: clamp(-20px, -3vw, -28px);
+  }
+  .colorCard:nth-child(4) {
+    margin-top: clamp(20px, 3vw, 28px);
   }
 }
 
@@ -256,39 +284,95 @@
   .typographySection {
     padding: 3rem 0 2.2rem 0;
   }
-  .topLeftAccent {
-    left: 1.5rem;
-    top: 1.2rem;
-  }
-  .sectionLine {
-    width: 90px;
-  }
-  .typoBgText {
-    font-size: 46px;
-    top: 14%;
-  }
 
-  .heading {
-    font-size: 1.6rem;
-  }
-
-  .typographyBlock {
-    margin-top: 60px;
-  }
-
-  .colorBlock {
-    margin-top: 2.5rem;
+  .colorCardsScrollWrapper {
+    overflow: visible;
+    padding: 0;
   }
 
   .colorCardsGrid {
-    gap: 1rem;
-    min-height: 170px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 1.2rem;
+    width: 90vw;
+    max-width: 320px;
+    margin: 2.5rem auto 0;
+    justify-content: center;
+    padding: 0;
   }
+
   .colorCard {
-    width: 120px;
-    height: 160px;
+    width: 100%;
+    max-width: 280px;
+    height: 220px;
+    margin: 0 !important; /* Reset all margins */
+    flex-shrink: 0;
   }
+
   .cardContentBottom {
-    padding: 0 0.7rem 0.9rem 0.7rem;
+    padding: 1rem 1.2rem 1.4rem 1.2rem;
+  }
+
+  .cardRole {
+    font-size: 1.1rem;
+  }
+
+  .cardHex {
+    font-size: 1rem;
+  }
+
+  .topLeftAccent {
+    top: clamp(1rem, 2.5vw, 1.4rem);
+    left: clamp(1rem, 3vw, 1.8rem);
+    gap: clamp(0.6rem, 1.8vw, 0.9rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .colorCardsGrid {
+    width: 92vw;
+    max-width: 300px;
+    gap: 1rem;
+  }
+
+  .colorCard {
+    height: 200px;
+  }
+
+  .cardContentBottom {
+    padding: 0.9rem 1rem 1.2rem 1rem;
+  }
+
+  .topLeftAccent {
+    top: 1rem;
+    left: 1.2rem;
+    gap: 0.7rem;
+  }
+
+  .sectionLabel {
+    font-size: 0.98rem;
+    letter-spacing: 0.1em;
+  }
+
+  .sectionLine {
+    width: clamp(90px, 22vw, 120px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .colorCardsScrollWrapper {
+    padding: 0 clamp(1.2rem, 4vw, 2.2rem);
+  }
+
+  .colorCardsGrid {
+    padding-right: clamp(1rem, 3vw, 1.8rem);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .colorCard:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
