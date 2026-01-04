@@ -39,15 +39,14 @@
 20. Fix the projects needed to be attached to the portfolio. (Done)
 21. Create each project pages to show details of personal projects on the portfolio. (Done)
 22. Fix the portfolio for mobile and tablet version. (Done)
-23. Upload it online and create a domain.
-24. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them.
-25. Upload the projects online.
-26. Create projects images as well to put in the portfolio.
-27. Attach the projects to the portfolio. Make sure to fix each project pages and their text.
-28. Fix the portfolio text.
-29. Link to clandely and also write all the text and different links places.
+23. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them. And the footer. (Done)
+24. Upload the images online which will create and put the images links to the database. Upload the projects online.
+25. Create projects images as well to put in the portfolio.
+26. Attach the projects to the portfolio. Make sure to fix each project pages and their text.
+27. Fix the portfolio text. Also fix the readme.md
+28. Link to clandely and also write all the text and different links places.
+29. Upload it online and create a domain.
 30. Make the resume btn work.
-31. Upload the new portfolio changes online.
 
 ## Colors:
 
