@@ -40,13 +40,13 @@
 21. Create each project pages to show details of personal projects on the portfolio. (Done)
 22. Fix the portfolio for mobile and tablet version. (Done)
 23. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them. And the footer. (Done)
-24. Upload the images online which will create and put the images links to the database. Upload the projects online.
-25. Create projects images as well to put in the portfolio.
-26. Attach the projects to the portfolio. Make sure to fix each project pages and their text.
-27. Fix the portfolio text. Also fix the readme.md
-28. Link to clandely and also write all the text and different links places.
-29. Upload it online and create a domain.
-30. Make the resume btn work.
+24. Upload the images online which will create and put the images links to the database using cloudinary. (Done)
+25. Create projects images as well to put on the portfolio pages.
+26. Attach the projects to the portfolio. Make sure to fix each project pages and their text also the README.md.
+27. Link to clandely and also write all the text and different links places.
+28. Upload it online and create a domain.
+29. Make the resume btn work.
+30. Upload the projects online. (koyeb, supabase,fly.io, render.com)
 
 ## Colors:
 

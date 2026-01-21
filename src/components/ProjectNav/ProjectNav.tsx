@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-// import { useInView } from 'framer-motion'; // or implement simple intersection observer
 import styles from './ProjectNav.module.css';
 import { projectsData } from '../../data/projectsData';
 
@@ -28,7 +27,7 @@ const ProjectNav = () => {
           <div className={styles.projectsMarquee}>
             {duplicatedProjects.map((project) => (
               <div
-                key={`${project.id}-${Math.random()}`} // Unique key for duplicates
+                key={`${project.id}-${Math.random()}`}
                 className={styles.projectThumb}
                 onClick={() => scrollToProject(project.id)}
               >
@@ -55,6 +54,14 @@ const ProjectNav = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* 🔒 LOCK OVERLAY – delete this block to unlock later */}
+      <div className={styles.lockOverlay}>
+        <div className={styles.lockContent}>
+          <p className={styles.lockLabel}>Coming Soon</p>
+          <p className={styles.lockSub}>Stay tuned!</p>
         </div>
       </div>
     </section>
