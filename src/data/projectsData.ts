@@ -11,7 +11,7 @@ export type Project = {
 export const projectsData: Project[] = [
   {
     id: 'p1',
-    title: 'Portfolio Site',
+    title: 'PAPERLANE',
     description:
       'A personal portfolio built with React + TypeScript. Responsive layout, accessible components, and deployed on Netlify.',
     tech: ['React', 'TypeScript', 'CSS Modules'],
@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 'p2',
-    title: 'Todo App',
+    title: 'ODLING',
     description:
       'A task management app with CRUD, localStorage persistence and filters. Good for practicing state management.',
     tech: ['React', 'Hooks', 'LocalStorage'],
@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 'p3',
-    title: 'API Dashboard',
+    title: 'CONNECT SPHERE',
     description:
       'Dashboard that consumes external APIs and visualizes data. Includes charts and responsive grid.',
     tech: ['React', 'Chart.js', 'Fetch API'],

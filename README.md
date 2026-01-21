@@ -42,11 +42,11 @@
 23. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them. And the footer. (Done)
 24. Upload the images online which will create and put the images links to the database using cloudinary. (Done)
 25. Create projects images as well to put on the portfolio pages.
-26. Attach the projects to the portfolio. Make sure to fix each project pages and their text also the README.md.
-27. Link to clandely and also write all the text and different links places.
-28. Upload it online and create a domain.
-29. Make the resume btn work.
-30. Upload the projects online. (koyeb, supabase,fly.io, render.com)
+26. Link to social media and clandely and also write all the text and different links places.
+27. Upload it online and create a domain.
+28. Make the resume btn work.
+29. Upload the projects online. (messanger app. koyeb, Paperlane. supabase,fly.io, odling. render.com)
+30. Attach the projects to the portfolio. Make sure to fix each project pages and their text also the README.md.
 
 ## Colors:
 
