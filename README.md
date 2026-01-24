@@ -41,7 +41,7 @@
 22. Fix the portfolio for mobile and tablet version. (Done)
 23. Fix the projects any unusual problems left and fix for mobile and tablet. Also create the Readme.md files for them. And the footer. (Done)
 24. Upload the images online which will create and put the images links to the database using cloudinary. (Done)
-25. Create projects images as well to put on the portfolio pages.
+25. Create projects images.(Done) And put on the portfolio pages.(Done)
 26. Link to social media and clandely and also write all the text and different links places.
 27. Upload it online and create a domain.
 28. Make the resume btn work.
