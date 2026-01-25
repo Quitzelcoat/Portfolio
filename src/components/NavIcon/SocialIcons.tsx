@@ -5,19 +5,19 @@ const SocialIcons: React.FC = () => {
   const socials = [
     {
       name: 'GitHub',
-      url: 'https://github.com/pklepa',
+      url: 'https://github.com/Quitzelcoat',
       icon: FaGithub,
       color: '#333333',
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/pedro-klepa/',
+      url: 'https://www.linkedin.com/in/haris-saeed-b91900276/',
       icon: FaLinkedin,
       color: '#0077b5',
     },
     {
       name: 'Instagram',
-      url: 'https://instagram.com/yourhandle',
+      url: 'https://instagram.com/direstate',
       icon: FaInstagram,
       color: '#E4405F',
     },

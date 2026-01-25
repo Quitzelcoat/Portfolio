@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
           <h3 className={styles.blockTitle}>Reach me online</h3>
           <div className={styles.socialRow}>
             <a
-              href="https://github.com/pklepa"
+              href="https://github.com/Quitzelcoat"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/pedro-klepa/"
+              href="https://www.linkedin.com/in/haris-saeed-b91900276/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
