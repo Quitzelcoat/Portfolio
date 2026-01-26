@@ -43,32 +43,32 @@ export const projectsData: Project[] = [
       'PostgreSQL',
       'JWT',
     ],
-    imageUrl: '/src/assets/images/1paperlane/home.png',
+    imageUrl: '/images/1paperlane/home.png',
     liveUrl: 'https://your-live-link.com',
     repoUrl: 'https://github.com/Quitzelcoat/blog-api',
     images: [
       {
-        src: '/src/assets/images/1paperlane/home.png',
+        src: '/images/1paperlane/home.png',
         alt: 'Blog API home feed with list of posts',
       },
       {
-        src: '/src/assets/images/1paperlane/login.png',
+        src: '/images/1paperlane/login.png',
         alt: 'Blog API login page',
       },
       {
-        src: '/src/assets/images/1paperlane/newPost.png',
+        src: '/images/1paperlane/newPost.png',
         alt: 'Create new post form',
       },
       {
-        src: '/src/assets/images/1paperlane/post.png',
+        src: '/images/1paperlane/post.png',
         alt: 'Single post with comments',
       },
       {
-        src: '/src/assets/images/1paperlane/post2.png',
+        src: '/images/1paperlane/post2.png',
         alt: 'Single post with comments - continued',
       },
       {
-        src: '/src/assets/images/1paperlane/userPosts.png',
+        src: '/images/1paperlane/userPosts.png',
         alt: 'User dashboard with list of user posts',
       },
     ],
@@ -105,48 +105,48 @@ export const projectsData: Project[] = [
       'JWT',
       'Cloudinary',
     ],
-    imageUrl: '/src/assets/images/2odling/home.png',
+    imageUrl: '/images/2odling/home.png',
     liveUrl: 'https://your-odling-live-link.com',
     repoUrl: 'https://github.com/you/odling',
     images: [
       {
-        src: '/src/assets/images/2odling/home.png',
+        src: '/images/2odling/home.png',
         alt: 'Odling landing page with hero section and auth actions',
       },
       {
-        src: '/src/assets/images/2odling/login.png',
+        src: '/images/2odling/login.png',
         alt: 'Odling login page',
       },
       {
-        src: '/src/assets/images/2odling/feed.png',
+        src: '/images/2odling/feed.png',
         alt: 'Feed showing posts from followed users with likes and comments',
       },
       {
-        src: '/src/assets/images/2odling/userProfile.png',
+        src: '/images/2odling/userProfile.png',
         alt: 'User profile with avatar, bio, and posts',
       },
       {
-        src: '/src/assets/images/2odling/editProfile.png',
+        src: '/images/2odling/editProfile.png',
         alt: 'Edit profile page with avatar upload and bio editing',
       },
       {
-        src: '/src/assets/images/2odling/friendSearch.png',
+        src: '/images/2odling/friendSearch.png',
         alt: 'Friend search page to discover new users',
       },
       {
-        src: '/src/assets/images/2odling/newPost.png',
+        src: '/images/2odling/newPost.png',
         alt: 'Create new post form with image upload',
       },
       {
-        src: '/src/assets/images/2odling/otherUsers.png',
+        src: '/images/2odling/otherUsers.png',
         alt: 'Other users page showing a list of all users',
       },
       {
-        src: '/src/assets/images/2odling/postEdit.png',
+        src: '/images/2odling/postEdit.png',
         alt: 'Edit post form with existing content loaded',
       },
       {
-        src: '/src/assets/images/2odling/postPage.png',
+        src: '/images/2odling/postPage.png',
         alt: 'Single post page with comments and likes',
       },
     ],
@@ -185,32 +185,32 @@ export const projectsData: Project[] = [
       'JWT',
       'bcryptjs',
     ],
-    imageUrl: '/src/assets/images/3connectsphere/home.png',
+    imageUrl: '/images/3connectsphere/home.png',
     liveUrl: 'https://your-messenger-live-link.com',
     repoUrl: 'https://github.com/you/messenger-app',
     images: [
       {
-        src: '/src/assets/images/3connectsphere/home.png',
+        src: '/images/3connectsphere/home.png',
         alt: 'ConnectSphere main messaging interface with user list and conversations',
       },
       {
-        src: '/src/assets/images/3connectsphere/signup.png',
+        src: '/images/3connectsphere/signup.png',
         alt: 'ConnectSphere signup screen with email and password fields',
       },
       {
-        src: '/src/assets/images/3connectsphere/allUsers.png',
+        src: '/images/3connectsphere/allUsers.png',
         alt: 'ConnectSphere all users list',
       },
       {
-        src: '/src/assets/images/3connectsphere/chat.png',
+        src: '/images/3connectsphere/chat.png',
         alt: 'ConnectSphere chat view with message bubbles, timestamps, and input box',
       },
       {
-        src: '/src/assets/images/3connectsphere/profile1.png',
+        src: '/images/3connectsphere/profile1.png',
         alt: 'ConnectSphere user profile page with avatar, bio, and editable details',
       },
       {
-        src: '/src/assets/images/3connectsphere/profile2.png',
+        src: '/images/3connectsphere/profile2.png',
         alt: 'ConnectSphere user profile page with avatar, bio, and editable details',
       },
     ],
