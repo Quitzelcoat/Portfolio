@@ -21,7 +21,7 @@ const Tools: React.FC = () => {
   const bgOpacity = useTransform(
     scrollYProgress,
     [0, 0.3, 1],
-    [0.02, 0.06, 0.02]
+    [0.02, 0.06, 0.02],
   );
 
   return (
@@ -96,6 +96,13 @@ const Tools: React.FC = () => {
             ease: [0.25, 0.46, 0.45, 0.94],
             delay: 0.12,
           }}
+          onClick={() =>
+            window.open(
+              'https://cal.com/haris-saeed-loytzu',
+              '_blank',
+              'noopener,noreferrer',
+            )
+          }
         >
           Let's Meet
         </motion.button>

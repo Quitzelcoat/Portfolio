@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/haris-saeed-b91900276/"
+              href="https://www.linkedin.com/in/quitz/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

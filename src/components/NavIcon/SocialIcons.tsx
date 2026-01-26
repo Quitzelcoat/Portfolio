@@ -11,7 +11,7 @@ const SocialIcons: React.FC = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/haris-saeed-b91900276/',
+      url: 'https://www.linkedin.com/in/quitz/',
       icon: FaLinkedin,
       color: '#0077b5',
     },
