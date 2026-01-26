@@ -11,8 +11,9 @@ export const commandData: CommandCardData[] = [
     title: 'About',
     lines: [
       'whoami',
-      'Haris Saeed — Software Engineer',
-      'based in Philadelphia, USA',
+      'Haris Saeed — Full-stack Software Engineer',
+      'based in New, USA • building stuff since my teens',
+      'Games, travel, and snapping photos when I’m not shipping code',
     ],
   },
 
@@ -21,8 +22,10 @@ export const commandData: CommandCardData[] = [
     title: 'Skills',
     lines: [
       'skills list',
-      'JavaScript · TypeScript · React · CSS ...',
-      'Node · PostgreSQL · Testing ...',
+      'JavaScript · TypeScript · React · Next.js',
+      'Node · Express · PostgreSQL · Prisma',
+      'HTML · CSS · Tailwind · Responsive Design',
+      'Testing · Git · CI/CD · Performance tuning',
     ],
   },
 
@@ -32,7 +35,8 @@ export const commandData: CommandCardData[] = [
     lines: [
       'focus',
       'building fast, accessible web apps',
-      'shipping maintainable code',
+      'shipping readable, maintainable code',
+      'clean UX, tiny interactions, and performance that feels instant',
     ],
   },
 ];

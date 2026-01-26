@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import aboutStyles from './About.module.css';
+import { aboutContent } from '../../data/aboutData';
 
 const About: React.FC = () => {
   const imgRef = useRef<HTMLDivElement | null>(null);
@@ -16,7 +17,7 @@ const About: React.FC = () => {
   const bgTextOpacity = useTransform(
     scrollYProgress,
     [0, 0.3, 1],
-    [0.02, 0.06, 0.02]
+    [0.02, 0.06, 0.02],
   );
 
   return (
@@ -41,8 +42,8 @@ const About: React.FC = () => {
           aria-hidden="true"
         />
         <motion.img
-          src="/images/louvre.jpg"
-          alt="Portrait of Me"
+          src="/images/quitz.jpg"
+          alt="Portrait of Haris"
           className={aboutStyles.img}
           style={{ y: imgY }}
         />
@@ -56,48 +57,13 @@ const About: React.FC = () => {
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         <h2>
-          My Story<span className={aboutStyles.aboutDot}>.</span>
+          {aboutContent.heading}
+          <span className={aboutStyles.aboutDot}>.</span>
         </h2>
-        <p>
-          Hello! I'm [Your Name], a passionate web developer with a knack for
-          creating dynamic and responsive web applications. My journey into web
-          development began a few years ago when I discovered the power of
-          coding to bring ideas to life on the internet.
-        </p>
-        <p>
-          Over the years, I've honed my skills in various technologies including
-          HTML, CSS, JavaScript, and popular frameworks like React and Node.js.
-          I thrive on solving complex problems and continuously learning new
-          tools and techniques to enhance my craft.
-        </p>
-        <p>
-          When I'm not coding, I enjoy exploring the outdoors, reading tech
-          blogs, and contributing to open-source projects. I'm excited to
-          connect with like-minded individuals and collaborate on innovative
-          projects that make a difference.
-        </p>
-        <p>
-          When I'm not coding, I enjoy exploring the outdoors, reading tech
-          blogs, and contributing to open-source projects. I'm excited to
-          connect with like-minded individuals and collaborate on innovative
-          projects that make a difference.
-        </p>
-        <p>
-          When I'm not coding, I enjoy exploring the outdoors, reading tech
-          blogs, and contributing to open-source projects. I'm excited to
-          connect with like-minded individuals and collaborate on innovative
-          projects that make a difference.
-        </p>
-        <p>
-          When I'm not coding, I enjoy exploring the outdoors, reading tech
-          blogs, and contributing to open-source projects. I'm excited to
-          connect with like-minded individuals and collaborate on innovative
-          projects that make a difference.
-        </p>
-        <p>
-          Thank you for visiting my portfolio! Feel free to reach out if you'd
-          like to work together or just want to say hello.
-        </p>
+
+        {aboutContent.paragraphs.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
       </motion.article>
     </section>
   );

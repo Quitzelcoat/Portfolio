@@ -45,8 +45,8 @@
 26. Link to social media and clandely and also write all the text and different links places.
 27. Upload it online and create a domain.
 28. Make the resume btn work.
-29. Upload the projects online. (messanger app. koyeb, Paperlane. supabase,fly.io, odling. render.com)
-30. Attach the projects to the portfolio. Make sure to fix each project pages and their text also the README.md.
+29. Create clients finding process automate then Upload the projects online. (messanger app. koyeb, Paperlane. supabase,fly.io, odling. render.com)
+30. Attach the projects to the portfolio. Make sure to fix each project pages and their text also the README.md. Including the honorable mentions.
 
 ## Colors:
 
