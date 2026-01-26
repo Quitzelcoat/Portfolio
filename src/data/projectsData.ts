@@ -107,7 +107,7 @@ export const projectsData: Project[] = [
     ],
     imageUrl: '/images/2odling/home.png',
     liveUrl: 'https://your-odling-live-link.com',
-    repoUrl: 'https://github.com/you/odling',
+    repoUrl: 'https://github.com/Quitzelcoat/Odling',
     images: [
       {
         src: '/images/2odling/home.png',
@@ -187,7 +187,7 @@ export const projectsData: Project[] = [
     ],
     imageUrl: '/images/3connectsphere/home.png',
     liveUrl: 'https://your-messenger-live-link.com',
-    repoUrl: 'https://github.com/you/messenger-app',
+    repoUrl: 'https://github.com/Quitzelcoat/messanger-app',
     images: [
       {
         src: '/images/3connectsphere/home.png',
